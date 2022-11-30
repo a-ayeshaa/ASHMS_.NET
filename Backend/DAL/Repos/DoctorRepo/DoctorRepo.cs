@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.DoctorRepo
 {
-    public class DoctorRepo : IRepo<Doctor, int, Doctor>
+    internal class DoctorRepo : IRepo<Doctor, int, Doctor>
     {
         ASHMS_Context db;
         public DoctorRepo()
