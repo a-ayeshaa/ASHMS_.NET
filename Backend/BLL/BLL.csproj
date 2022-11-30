@@ -50,6 +50,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PatientServices\PatientServices.cs" />
     <Compile Include="Services\UserServices\UserServices.cs" />
+    <Compile Include="DTO\DoctorDTOS\DoctorDTO.cs" />
+    <Compile Include="DTO\PatientDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DoctorServices\DoctorServices.cs" />
+    <Compile Include="Services\PatientServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

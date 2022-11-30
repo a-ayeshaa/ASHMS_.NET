@@ -1,5 +1,6 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
+using DAL.Repos.DoctorRepo;
 using DAL.Repos.PatientRepo;
 using DAL.Repos.UserRepo;
 using System;
@@ -19,6 +20,10 @@ namespace DAL
         public static IRepo<User, string, User> UserDataAccess()
         {
             return new UserRepo();
+        }
+        public static IRepo<Doctor, int, Doctor> DoctorDataAccess()
+        {
+            return new DoctorRepo();
         }
     }
 }
