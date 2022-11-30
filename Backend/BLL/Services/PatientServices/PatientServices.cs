@@ -5,12 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BLL.DTO;
+using BLL.DTO.PatientDTOs;
 using AutoMapper;
 
-namespace BLL.Services
+namespace BLL.Services.PatientServices
 {
-    public class PatientService
+    public class PatientServices
     {
 
         public static PatientDTO Get(int id)
