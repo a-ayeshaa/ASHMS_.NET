@@ -34,3 +34,17 @@ D:\University\Semester 9\.NET\.NET final\project\New folder\BLL\obj\Debug\BLL.cs
 D:\University\Semester 9\.NET\.NET final\project\New folder\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\University\Semester 9\.NET\.NET final\project\New folder\BLL\obj\Debug\BLL.dll
 D:\University\Semester 9\.NET\.NET final\project\New folder\BLL\obj\Debug\BLL.pdb
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.pdb
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\BLL.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\BLL.pdb
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\AutoMapper.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\DAL.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\EntityFramework.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\DAL.pdb
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\DAL.dll.config
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\AutoMapper.xml
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\EntityFramework.xml
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.csproj.CopyComplete

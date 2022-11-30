@@ -49,3 +49,21 @@ D:\University\Semester 9\.NET\.NET final\project\New folder\DAL\obj\Debug\DAL.cs
 D:\University\Semester 9\.NET\.NET final\project\New folder\DAL\obj\Debug\DAL.dll
 D:\University\Semester 9\.NET\.NET final\project\New folder\DAL\obj\Debug\DAL.pdb
 D:\University\Semester 9\.NET\.NET final\project\New folder\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithValUserId.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\DAL.dll.config
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\DAL.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\DAL.pdb
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\EntityFramework.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\EntityFramework.xml
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedNoVal.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedWithVal.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.Migrations.PatientCreatedWithVal.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithVal.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithValUserId.resources
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.dll
+D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.pdb
