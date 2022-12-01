@@ -1,1 +1,4 @@
 /Backend/APIAppLayer/.vs
+/Backend/APIAppLayer/obj/Debug
+/Backend/BLL/obj/Debug
+/Backend/DAL/obj/Debug
