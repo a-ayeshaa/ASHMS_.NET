@@ -48,3 +48,17 @@ D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\D
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\AutoMapper.xml
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\bin\Debug\EntityFramework.xml
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\obj\Debug\BLL.dll
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\obj\Debug\BLL.pdb
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\BLL.dll
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\BLL.pdb
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\AutoMapper.dll
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\DAL.dll
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\EntityFramework.dll
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\DAL.pdb
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\DAL.dll.config
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\AutoMapper.xml
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\bin\Debug\EntityFramework.xml
+D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\BLL\obj\Debug\BLL.csproj.CopyComplete

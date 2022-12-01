@@ -1,4 +1,5 @@
-﻿using BLL.Services.DoctorServices;
+﻿using BLL.DTO.DoctorDTOS;
+using BLL.Services.DoctorServices;
 using BLL.Services.PatientServices;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,38 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
+        [Route("api/doctors/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Get(int id)
+        {
+            try
+            {
+                var data = DoctorServices.Get(id);
 
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+        [Route("api/doctors/add")]
+        [HttpPost]
+        public HttpResponseMessage Add(DoctorDTO doctor)
+        {
+            try
+            {
+                var data = DoctorServices.Add(doctor);
+                if (data != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, new { });
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
     }
 }
