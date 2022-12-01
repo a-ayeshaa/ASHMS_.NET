@@ -24,5 +24,20 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
+
+        [Route("api/patients/add")]
+        [HttpGet]
+        public HttpResponseMessage Add()
+        {
+            try
+            {
+                var data = PatientServices.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
     }
 }
