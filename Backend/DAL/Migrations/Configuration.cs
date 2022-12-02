@@ -17,23 +17,25 @@
 
         protected override void Seed(DAL.ASHMS_Context context)
         {
+            //USER TABLE SEED [PATIENT]
             string[] Genders = { "Male", "Female" };
-            string[] BloodGroups = { "A+", "A-","AB+","AB-","B-","B+","O-","O+" };
+            string[] BloodGroups = { "A+", "A-", "AB+", "AB-", "B-", "B+", "O-", "O+" };
             List<User> users = new List<User>();
 
-            for (int i=1;i<=10;i++)
+            for (int i = 1; i <= 10; i++)
             {
                 users.Add(new User()
                 {
                     Id = i,
-                    Username = "patient"+i,
+                    Username = "patient" + i,
                     Password = "123",
                     Email = "patient" + i + "@gmail.com",
                     Role = "Patient"
                 });
             }
-            context.Users.AddOrUpdate(users.ToArray()); 
+            context.Users.AddOrUpdate(users.ToArray());
 
+            //PATIENT TABLE SEED
             List<Patient> patients = new List<Patient>();
             Random r = new Random();
             Random random = new Random();
@@ -42,18 +44,62 @@
                 patients.Add(new Patient()
                 {
                     Id = i,
-                    Name = "Patient"+i,
+                    Name = "Patient" + i,
                     DateOfBirth = DateTime.Now,
                     RegisteredAt = DateTime.Now,
-                    Gender = Genders[random.Next(0,2)],
+                    Gender = Genders[random.Next(0, 2)],
                     UserId = i,
-                    BloodGroup = BloodGroups[r.Next(0,BloodGroups.Length)],
+                    BloodGroup = BloodGroups[r.Next(0, BloodGroups.Length)],
                     Phone = "0177777777"
-                    
+
                 });
             }
             context.Patients.AddOrUpdate(patients.ToArray());
 
+            // USER TABLE SEED [DOCTOR]
+            for (int i = 11; i <= 20; i++)
+            {
+                users.Add(new User()
+                {
+                    Id = i,
+                    Username = "doctor" + i,
+                    Password = "222",
+                    Email = "doctor" + i + "@hospital.org",
+                    Role = "Doctor"
+                });
+            }
+            context.Users.AddOrUpdate(users.ToArray());
+
+            // DOCTOR TABLE SEED
+            string[] specializations = 
+            { 
+                "Medicine", "Orthopedics", 
+                "Oncology", "Radiology", 
+                "Diabetology", "ENT", "Dermatology", 
+                "Pediatrics", "Surgery"
+            };
+            string[] degrees = { "MBBS", "MD", "FCPS", "DTCD" };
+            string[] days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+            List<Doctor> doctors = new List<Doctor>();
+            Random drandom = new Random();
+            Random drnd = new Random();
+            Random random1 = new Random();
+            Random random2 = new Random();
+            for (int i = 11; i <= 20; i++)
+            {
+                doctors.Add(new Doctor()
+                {
+                    UserId = i,
+                    Name = "Doctor" + i,
+                    Specialization = specializations[drandom.Next(0, specializations.Length)],
+                    Degree = degrees[drnd.Next(0,degrees.Length)],
+                    Appointment_Fees = random1.Next(500, 3000),
+                    VisitingDays= days[random1.Next(0, days.Length)] + "," + days[random2.Next(0, days.Length)] + "," + days[drandom.Next(0, days.Length)] + "," + days[drnd.Next(0, days.Length)],
+                    Net_Earnings = random2.Next(10000, 500000)
+                });
+            }
+            context.Doctors.AddOrUpdate(doctors.ToArray());
         }
     }
 }

@@ -77,6 +77,14 @@
     <Compile Include="Migrations\202211301846085_DoctorCreatedWithValUserId.designer.cs">
       <DependentUpon>202211301846085_DoctorCreatedWithValUserId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212011958431_DoctorSeed.cs" />
+    <Compile Include="Migrations\202212011958431_DoctorSeed.designer.cs">
+      <DependentUpon>202212011958431_DoctorSeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212012007499_DoctorSeed1.cs" />
+    <Compile Include="Migrations\202212012007499_DoctorSeed1.designer.cs">
+      <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
@@ -98,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202211301846085_DoctorCreatedWithValUserId.resx">
       <DependentUpon>202211301846085_DoctorCreatedWithValUserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212011958431_DoctorSeed.resx">
+      <DependentUpon>202212011958431_DoctorSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212012007499_DoctorSeed1.resx">
+      <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
