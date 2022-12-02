@@ -1,12 +1,21 @@
 ﻿using BLL.DTO.DoctorDTOS;
+using BLL.DTO.UserDTOs;
 using BLL.Services.DoctorServices;
 using BLL.Services.PatientServices;
+using BLL.Services.UserServices;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 
 namespace APIAppLayer.Controllers
 {
@@ -43,14 +52,19 @@ namespace APIAppLayer.Controllers
         }
         [Route("api/doctors/add")]
         [HttpPost]
-        public HttpResponseMessage Add(DoctorDTO doctor)
+        public HttpResponseMessage Add([FromBody]CompositeObject json)
         {
             try
             {
-                var data = DoctorServices.Add(doctor);
-                if (data != null)
+                UserDTO user = json.User;
+                DoctorDTO doc = json.Doctor;
+
+                if (user != null && doc!= null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                    var userData = UserServices.Add(user);
+                    var doctorData = DoctorServices.Add(doc);
+
+                    return Request.CreateResponse(HttpStatusCode.OK, user);
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new { });
             }
@@ -58,6 +72,22 @@ namespace APIAppLayer.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
+        }
+        [Route("api/doctors/delete/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Delete(int id)
+        {
+            try
+            {
+                var data = DoctorServices.Delete(id);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
         }
     }
 }
