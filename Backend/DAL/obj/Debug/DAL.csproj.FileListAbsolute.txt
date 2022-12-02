@@ -67,23 +67,21 @@ D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\D
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.dll
 D:\Semester 10\.NET\AppointmentSchedulingHMS_AdvDotNet(Merged)\Backend\DAL\obj\Debug\DAL.pdb
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\DAL.dll.config
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\DAL.dll
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\DAL.pdb
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\EntityFramework.dll
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\EntityFramework.SqlServer.dll
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\EntityFramework.xml
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedNoVal.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedWithVal.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.PatientCreatedWithVal.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithVal.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithValUserId.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.dll
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.pdb
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.DoctorSeed.resources
-D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\DAL\obj\Debug\DAL.Migrations.DoctorSeed1.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\DAL.dll.config
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\DAL.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\DAL.pdb
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\EntityFramework.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\EntityFramework.xml
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedNoVal.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.Migrations.UserCreatedWithVal.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.Migrations.PatientCreatedWithVal.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithVal.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.Migrations.DoctorCreatedWithValUserId.resources
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\DAL\obj\Debug\DAL.pdb
