@@ -53,7 +53,16 @@ namespace BLL.Services.DoctorServices
 
         public static bool Delete(int id)
         {
-            return DataAccessFactory.DoctorDataAccess().Delete(id);
+            var doctor = DataAccessFactory.DoctorDataAccess().Get(id);
+
+            if(DataAccessFactory.DoctorDataAccess().Delete(doctor.Id))
+            {
+                return DataAccessFactory.UserDataAccess().Delete(doctor.UserId);                
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static DoctorDTO Update(DoctorDTO obj)

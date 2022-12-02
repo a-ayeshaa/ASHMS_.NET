@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.UserRepo
 {
-    internal class UserRepo:IRepo<User,string,User>
+    internal class UserRepo:IRepo<User,int,User>
     {
         ASHMS_Context db;
         public UserRepo()
@@ -22,14 +22,14 @@ namespace DAL.Repos.UserRepo
             return obj;
         }
 
-        public bool Delete(string username)
+        public bool Delete(int username)
         {
             var data = db.Users.Find(username);
             db.Users.Remove(data);
             return db.SaveChanges() > 0;
         }
 
-        public User Get(string username)
+        public User Get(int username)
         {
             return db.Users.Find(username);
         }

@@ -17,7 +17,7 @@ namespace DAL
         {
             return new PatientRepo();
         }
-        public static IRepo<User, string, User> UserDataAccess()
+        public static IRepo<User, int, User> UserDataAccess()
         {
             return new UserRepo();
         }

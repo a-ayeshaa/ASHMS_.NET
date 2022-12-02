@@ -12,7 +12,14 @@ namespace BLL.Services.UserServices
 {
     public class UserServices
     {
-        public static UserDTO Get(string id)
+        private UserDTO userDTO;
+
+        public UserServices(UserDTO userDTO)
+        {
+            this.userDTO = userDTO;
+        }
+
+        public static UserDTO Get(int id)
         {
             var data = DataAccessFactory.UserDataAccess().Get(id);
             var config = new MapperConfiguration(c =>
@@ -50,7 +57,7 @@ namespace BLL.Services.UserServices
 
         }
 
-        public static bool Delete(string id)
+        public static bool Delete(int id)
         {
             return DataAccessFactory.UserDataAccess().Delete(id);
         }
