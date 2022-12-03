@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\ASHMS_Context.cs" />
+    <Compile Include="EF\Models\Transaction.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
     <Compile Include="EF\Models\Patient.cs" />
     <Compile Include="EF\Models\Test.cs" />
@@ -88,8 +89,14 @@
     <Compile Include="Migrations\202212012007499_DoctorSeed1.designer.cs">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212031134385_TestModelCreated.cs" />
+    <Compile Include="Migrations\202212031134385_TestModelCreated.designer.cs">
+      <DependentUpon>202212031134385_TestModelCreated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminRepo\AdminRepo.cs" />
+    <Compile Include="Repos\AdminRepo\TransactionRepo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212012007499_DoctorSeed1.resx">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212031134385_TestModelCreated.resx">
+      <DependentUpon>202212031134385_TestModelCreated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
