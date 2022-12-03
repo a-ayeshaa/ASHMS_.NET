@@ -10,14 +10,14 @@ using System.Xml.Linq;
 
 namespace DAL.EF.Models
 {
-//    id
-//user_id
-//name
-//dob
-//registeredAt
-//gender
-//phone
-//blood_group
+    //    id
+    //user_id
+    //name
+    //dob
+    //registeredAt
+    //gender
+    //phone
+    //blood_group
     public class Patient
     {
         public int Id { get; set; }

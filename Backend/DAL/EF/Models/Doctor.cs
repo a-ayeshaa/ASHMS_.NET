@@ -36,6 +36,13 @@ namespace DAL.EF.Models
         [ForeignKey("User")]
         public int UserId { get; set; }
 
-        public virtual User User { get; set; }
+        public User User { get; set; }
+
+
+        public virtual List<Transaction> Transactions { get; set; }
+        public Doctor()
+        {
+            Transactions = new List<Transaction>();
+        }
     }
 }
