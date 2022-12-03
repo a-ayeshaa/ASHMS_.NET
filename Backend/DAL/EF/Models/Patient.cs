@@ -10,14 +10,14 @@ using System.Xml.Linq;
 
 namespace DAL.EF.Models
 {
-//    id
-//user_id
-//name
-//dob
-//registeredAt
-//gender
-//phone
-//blood_group
+    //    id
+    //user_id
+    //name
+    //dob
+    //registeredAt
+    //gender
+    //phone
+    //blood_group
     public class Patient
     {
         public int Id { get; set; }
@@ -41,5 +41,10 @@ namespace DAL.EF.Models
         public int UserId { get; set; }
 
         public User User { get; set; }
+
+        public virtual List<Transaction> Transactions { get; set; }
+        public Patient (){
+            Transactions = new List<Transaction> ();
+        }
     }
 }
