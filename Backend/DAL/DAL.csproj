@@ -88,11 +88,16 @@
     <Compile Include="Migrations\202212012007499_DoctorSeed1.designer.cs">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212031159352_FKfixed.cs" />
+    <Compile Include="Migrations\202212031159352_FKfixed.designer.cs">
+      <DependentUpon>202212031159352_FKfixed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
+    <Compile Include="Repos\PatientRepo\Test_TransactionRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\UserRepo\UserRepo.cs" />
   </ItemGroup>
@@ -117,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212012007499_DoctorSeed1.resx">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212031159352_FKfixed.resx">
+      <DependentUpon>202212031159352_FKfixed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

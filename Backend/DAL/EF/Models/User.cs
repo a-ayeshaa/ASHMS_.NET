@@ -22,5 +22,13 @@ namespace DAL.EF.Models
         [Required]
         [StringLength(20)]
         public string Role { get; set; }
+
+        public virtual List<Patient> Patients { get; set; }
+        public virtual List<Doctor> Doctors { get; set; }
+        public User()
+        {
+            Patients = new List<Patient>();
+            Doctors = new List<Doctor>();   
+        }
     }
 }
