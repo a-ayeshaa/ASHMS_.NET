@@ -14,13 +14,13 @@ namespace DAL.EF.Models
 
         [Required]
 
-        [ForeignKey("Patient")]
+        //[ForeignKey("Patient")]
         public int Patient_id { get; set; }
 
-        [Required]
+        //[Required]
 
-        [ForeignKey("Doctor")]
-        public int Doctor_id { get; set; }
+        //[ForeignKey("Doctor")]
+       // public int Doctor_id { get; set; }
 
         [Required]
         public float Total_Amount { get; set; }
@@ -37,8 +37,8 @@ namespace DAL.EF.Models
         [Required]
         public Boolean status { get; set; }
 
-        public virtual Patient Patient { get; set; }
+        //public virtual Patient Patient { get; set; }
 
-        public virtual Doctor Doctor { get; set; }
+        //public virtual Doctor Doctor { get; set; }
     }
 }

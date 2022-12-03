@@ -89,13 +89,9 @@
     <Compile Include="Migrations\202212012007499_DoctorSeed1.designer.cs">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212031134385_TestModelCreated.cs" />
-    <Compile Include="Migrations\202212031134385_TestModelCreated.designer.cs">
-      <DependentUpon>202212031134385_TestModelCreated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212031159352_FKfixed.cs" />
-    <Compile Include="Migrations\202212031159352_FKfixed.designer.cs">
-      <DependentUpon>202212031159352_FKfixed.cs</DependentUpon>
+    <Compile Include="Migrations\202212031919537_abc.cs" />
+    <Compile Include="Migrations\202212031919537_abc.designer.cs">
+      <DependentUpon>202212031919537_abc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,11 +126,8 @@
     <EmbeddedResource Include="Migrations\202212012007499_DoctorSeed1.resx">
       <DependentUpon>202212012007499_DoctorSeed1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212031134385_TestModelCreated.resx">
-      <DependentUpon>202212031134385_TestModelCreated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212031159352_FKfixed.resx">
-      <DependentUpon>202212031159352_FKfixed.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212031919537_abc.resx">
+      <DependentUpon>202212031919537_abc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

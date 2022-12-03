@@ -43,9 +43,11 @@ namespace DAL.EF.Models
         public virtual User User { get; set; }
 
         public virtual List<Test_Transaction> Test_Transactions { get; set; }
+        //public virtual List<Transaction> Transactions { get; set; }
         public Patient()
         {
             Test_Transactions = new List<Test_Transaction>();
+            //Transactions = new List<Transaction>();
         }
     }
 }
