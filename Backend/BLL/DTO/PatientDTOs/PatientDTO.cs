@@ -15,6 +15,7 @@ namespace BLL.DTO.PatientDTOs
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string BloodGroup { get; set; }
+        public int UserId { get; set; }
 
     }
 }

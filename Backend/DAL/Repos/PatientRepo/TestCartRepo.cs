@@ -8,38 +8,38 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.PatientRepo
 {
-    internal class PatientRepo : Repo,IRepo<Patient, int, Patient>
+    internal class TestCartRepo:Repo,IRepo<TestCart,int,TestCart>
     {
-       
-        public Patient Add(Patient obj)
+        public TestCart Add(TestCart obj)
         {
-            db.Patients.Add(obj);
+            db.TestCarts.Add(obj);
             db.SaveChanges();
             return obj;
         }
 
         public bool Delete(int id)
         {
-            var data = db.Patients.Find(id);
-            db.Patients.Remove(data);
+            var data = db.TestCarts.Find(id);
+            db.TestCarts.Remove(data);
             return db.SaveChanges() > 0;
         }
 
-        public Patient Get(int id)
+        public TestCart Get(int id)
         {
-            return db.Patients.Find(id);
+            return db.TestCarts.Find(id);
         }
 
-        public List<Patient> Get()
+        public List<TestCart> Get()
         {
-            return db.Patients.ToList();
+            return db.TestCarts.ToList();
         }
 
-        public bool Update(Patient obj)
+        public bool Update(TestCart obj)
         {
-            var dbobj = db.Patients.Find(obj.Id);
+            var dbobj = db.TestCarts.Find(obj.Id);
             db.Entry(dbobj).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }
     }
 }
+

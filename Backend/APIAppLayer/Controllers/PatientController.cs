@@ -1,9 +1,13 @@
-﻿using BLL.Services.PatientServices;
+﻿using BLL.DTO.PatientDTOs;
+using BLL.Services.DoctorServices;
+using BLL.Services.PatientServices;
+using BLL.Services.UserServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace APIAppLayer.Controllers
@@ -39,7 +43,7 @@ namespace APIAppLayer.Controllers
             }
         }
 
-        [Route("api/patients/delete/id")]
+        [Route("api/patients/delete/{id}")]
         [HttpGet]
         public HttpResponseMessage Delete(int id)
         {
@@ -55,18 +59,47 @@ namespace APIAppLayer.Controllers
         }
 
         [Route("api/patients/add")]
-        [HttpGet]
-        public HttpResponseMessage Add()
+        [HttpPost]
+        public HttpResponseMessage Add([FromBody]CompositeObject data)
         {
             try
             {
-                var data = PatientServices.Get();
-                return Request.CreateResponse(HttpStatusCode.OK, data);
+                var user = data.User;
+                var patient = data.Patient;
+                if (user != null && patient != null)
+                {
+                    var userData = UserServices.Add(user);
+                    patient.UserId = userData.Id;
+                    patient.RegisteredAt=DateTime.Now;
+
+                    var patientData = PatientServices.Add(patient);
+
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "ERROR OCCURED");
+
             }
             catch
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
+        [Route("api/patients/update/{id}")]
+        [HttpPost]
+        public HttpResponseMessage Update(int id,PatientDTO data)
+        {
+            try
+            {
+                var obj = PatientServices.Update(data);
+                return Request.CreateResponse(HttpStatusCode.OK, obj);
+
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+
+
     }
 }

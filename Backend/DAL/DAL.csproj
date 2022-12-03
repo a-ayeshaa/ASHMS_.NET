@@ -55,6 +55,9 @@
     <Compile Include="EF\ASHMS_Context.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
     <Compile Include="EF\Models\Patient.cs" />
+    <Compile Include="EF\Models\Test.cs" />
+    <Compile Include="EF\Models\TestCart.cs" />
+    <Compile Include="EF\Models\Test_Transaction.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202211281935533_UserCreatedNoVal.cs" />
@@ -89,6 +92,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
+    <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
+    <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\UserRepo\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>

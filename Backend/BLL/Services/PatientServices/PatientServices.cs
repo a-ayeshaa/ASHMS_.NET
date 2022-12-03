@@ -53,10 +53,15 @@ namespace BLL.Services.PatientServices
 
         public static bool Delete(int id)
         {
-            return DataAccessFactory.PatientDataAccess().Delete(id);
+            var data = DataAccessFactory.PatientDataAccess().Get(id);
+            if(DataAccessFactory.PatientDataAccess().Delete(id))
+            {
+                return DataAccessFactory.UserDataAccess().Delete(data.UserId);
+            }    
+            return false;
         }
 
-        public static PatientDTO Update(PatientDTO obj)
+        public static bool Update(PatientDTO obj)
         {
             var config = new MapperConfiguration(c =>
             {
@@ -66,7 +71,7 @@ namespace BLL.Services.PatientServices
             var mapper = new Mapper(config);
             var newobj = mapper.Map<Patient>(obj);
             var data = DataAccessFactory.PatientDataAccess().Update(newobj);
-            return mapper.Map<PatientDTO>(data);
+            return data;
         }
     }
 }
