@@ -96,6 +96,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AdminRepo.cs" />
+    <Compile Include="Repos\AdminRepo\TestRepo.cs" />
     <Compile Include="Repos\AdminRepo\TransactionRepo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
