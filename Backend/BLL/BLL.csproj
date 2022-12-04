@@ -47,10 +47,13 @@
   <ItemGroup>
     <Compile Include="DTO\AdminDTOs\AdminDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientDTO.cs" />
+    <Compile Include="DTO\PatientDTOs\TestCartDTO.cs" />
     <Compile Include="DTO\UserDTOs\TransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\Test_TransactionDTO.cs" />
     <Compile Include="DTO\UserDTOs\UserDTO.cs" />
     <Compile Include="Services\PatientServices\PatientServices.cs" />
+    <Compile Include="Services\PatientServices\TestCartServices.cs" />
+    <Compile Include="Services\PatientServices\Test_TransactionServices.cs" />
     <Compile Include="Services\UserServices\UserServices.cs" />
     <Compile Include="DTO\DoctorDTOS\DoctorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
