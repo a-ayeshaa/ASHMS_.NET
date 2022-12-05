@@ -12,6 +12,7 @@ namespace DAL.Repos.PatientRepo
     {
         public TestCart Add(TestCart obj)
         {
+            obj.Test_Transaction_Id=null;
             db.TestCarts.Add(obj);
             db.SaveChanges();
             return obj;
@@ -36,6 +37,10 @@ namespace DAL.Repos.PatientRepo
 
         public bool Update(TestCart obj)
         {
+            if(obj.Test_Transaction_Id==0)
+            {
+                obj.Test_Transaction_Id = null;
+            }
             var dbobj = db.TestCarts.Find(obj.Id);
             db.Entry(dbobj).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
