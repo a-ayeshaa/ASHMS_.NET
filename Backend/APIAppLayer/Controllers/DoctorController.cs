@@ -89,5 +89,22 @@ namespace APIAppLayer.Controllers
             }
 
         }
+        [Route("api/doctors/update")]
+        [HttpPost]
+        public HttpResponseMessage Update(DoctorDTO doctor)
+        {
+            try
+            {
+                var data = DoctorServices.Update(doctor);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
+
     }
 }

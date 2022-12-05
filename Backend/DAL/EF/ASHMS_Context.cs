@@ -17,5 +17,6 @@ namespace DAL
         public DbSet<Test> Tests { get; set; }
         public DbSet<Test_Transaction> Test_Transactions { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
     }
 }
