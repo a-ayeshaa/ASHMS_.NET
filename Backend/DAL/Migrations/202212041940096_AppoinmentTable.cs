@@ -20,8 +20,8 @@
                         revisit_count = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Doctors", t => t.Doctor_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Patients", t => t.Patient_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Doctors", t => t.Doctor_Id, cascadeDelete: false)
+                .ForeignKey("dbo.Patients", t => t.Patient_Id, cascadeDelete: false)
                 .Index(t => t.Doctor_Id)
                 .Index(t => t.Patient_Id);
             
