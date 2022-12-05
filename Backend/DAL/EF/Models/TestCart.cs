@@ -14,10 +14,12 @@ namespace DAL.EF.Models
         [ForeignKey("Test")]
         [Required]
         public int Test_Id { get; set; }
-        [Required]
         [ForeignKey("Test_Transaction")]
-        public int Test_Transaction_Id { get; set; }
-        public Test Test { get; set; }
-        public Test_Transaction Test_Transaction { get; set; }
+        public int? Test_Transaction_Id { get; set; }
+        [ForeignKey("Patient")]
+        public int Patient_Id { get; set; }
+        public virtual Test Test { get; set; }
+        public virtual Test_Transaction Test_Transaction { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

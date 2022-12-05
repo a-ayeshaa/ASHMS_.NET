@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AppoinmentTable : DbMigration
+    public partial class appointment1 : DbMigration
     {
         public override void Up()
         {
@@ -13,7 +13,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Doctor_Id = c.Int(nullable: false),
-                        Patient_Id = c.Int(nullable: false),
+                        Patient_Id = c.Int(),
                         startedAt = c.DateTime(nullable: false),
                         endedAt = c.DateTime(nullable: false),
                         status = c.String(nullable: false, maxLength: 50),
@@ -21,7 +21,7 @@
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Doctors", t => t.Doctor_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Patients", t => t.Patient_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Patients", t => t.Patient_Id)
                 .Index(t => t.Doctor_Id)
                 .Index(t => t.Patient_Id);
             

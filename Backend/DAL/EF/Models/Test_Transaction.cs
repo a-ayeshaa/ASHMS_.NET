@@ -11,9 +11,7 @@ namespace DAL.EF.Models
     public class Test_Transaction
     {
         public int Id { get; set; }
-        [ForeignKey("Patient")]
-        [Required]
-        public int Patient_Id { get; set; }
+        
         [Required]
         [StringLength(50)]
 
@@ -32,7 +30,6 @@ namespace DAL.EF.Models
 
         public string Report_Delivered { get; set; }
 
-        public virtual Patient Patient { get; set; }    
 
         public virtual List<TestCart> Carts { get; set; }
         public Test_Transaction()

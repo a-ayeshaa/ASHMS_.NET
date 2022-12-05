@@ -26,8 +26,8 @@ namespace DAL.EF.Models
         [Range(0,double.PositiveInfinity)]
         public int revisit_count { get; set; }
 
-        public Doctor Doctor{ get; set; }
-        public Patient Patient { get; set; }
+        public virtual Doctor Doctor{ get; set; }
+        public virtual Patient Patient { get; set; }
 
     }
 }

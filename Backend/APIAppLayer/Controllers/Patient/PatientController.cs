@@ -10,7 +10,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 
-namespace APIAppLayer.Controllers
+namespace APIAppLayer.Controllers.Patient
 {
     public class PatientController : ApiController
     {
@@ -75,7 +75,7 @@ namespace APIAppLayer.Controllers
 
                     var patientData = PatientServices.Add(patient);
 
-                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                    return Request.CreateResponse(HttpStatusCode.OK, patientData);
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "ERROR OCCURED");
 

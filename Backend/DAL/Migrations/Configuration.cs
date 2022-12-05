@@ -114,6 +114,20 @@
                 }) ;
             }
             context.Tests.AddOrUpdate(tests.ToArray());
+
+            //TESTCART SEED TABLE
+
+            List<TestCart> testcart = new List<TestCart>();
+            Random p = new Random();
+            for (int i = 1; i <= 20; i++)
+            {
+                testcart.Add(new TestCart()
+                {
+                    Test_Id = p.Next(1, 21),
+                    Patient_Id = p.Next(1, 11)
+                });
+            }
+            context.TestCarts.AddOrUpdate(testcart.ToArray());
         }
     }
 }
