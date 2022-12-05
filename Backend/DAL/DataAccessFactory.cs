@@ -27,9 +27,9 @@ namespace DAL
         {
             return new PatientRepo();
         }
-        public static IRepo<Test_Transaction, int, Test_Transaction> Test_TransactionDataAccess()
+        public static IRepo<TestTransaction, int, TestTransaction> TestTransactionDataAccess()
         {
-            return new Test_TransactionRepo();
+            return new TestTransactionRepo();
         }
         public static IRepo<TestCart, int, TestCart> TestCartDataAccess()
         {

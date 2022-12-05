@@ -59,48 +59,12 @@
     <Compile Include="EF\Models\Patient.cs" />
     <Compile Include="EF\Models\Test.cs" />
     <Compile Include="EF\Models\TestCart.cs" />
-    <Compile Include="EF\Models\Test_Transaction.cs" />
+    <Compile Include="EF\Models\TestTransaction.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202211281935533_UserCreatedNoVal.cs" />
-    <Compile Include="Migrations\202211281935533_UserCreatedNoVal.designer.cs">
-      <DependentUpon>202211281935533_UserCreatedNoVal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211281942280_UserCreatedWithVal.cs" />
-    <Compile Include="Migrations\202211281942280_UserCreatedWithVal.designer.cs">
-      <DependentUpon>202211281942280_UserCreatedWithVal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211292112200_PatientCreatedWithVal.cs" />
-    <Compile Include="Migrations\202211292112200_PatientCreatedWithVal.designer.cs">
-      <DependentUpon>202211292112200_PatientCreatedWithVal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211301716043_DoctorCreatedWithVal.cs" />
-    <Compile Include="Migrations\202211301716043_DoctorCreatedWithVal.designer.cs">
-      <DependentUpon>202211301716043_DoctorCreatedWithVal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211301846085_DoctorCreatedWithValUserId.cs" />
-    <Compile Include="Migrations\202211301846085_DoctorCreatedWithValUserId.designer.cs">
-      <DependentUpon>202211301846085_DoctorCreatedWithValUserId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212011958431_DoctorSeed.cs" />
-    <Compile Include="Migrations\202212011958431_DoctorSeed.designer.cs">
-      <DependentUpon>202212011958431_DoctorSeed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212031919537_abc.cs" />
-    <Compile Include="Migrations\202212031919537_abc.designer.cs">
-      <DependentUpon>202212031919537_abc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212051435572_appointment1.cs" />
-    <Compile Include="Migrations\202212051435572_appointment1.designer.cs">
-      <DependentUpon>202212051435572_appointment1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212051506359_appointment2.cs" />
-    <Compile Include="Migrations\202212051506359_appointment2.designer.cs">
-      <DependentUpon>202212051506359_appointment2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212052048303_aaa.cs" />
-    <Compile Include="Migrations\202212052048303_aaa.designer.cs">
-      <DependentUpon>202212052048303_aaa.cs</DependentUpon>
+    <Compile Include="Migrations\202212052127501_allold.cs" />
+    <Compile Include="Migrations\202212052127501_allold.designer.cs">
+      <DependentUpon>202212052127501_allold.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,47 +75,19 @@
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
-    <Compile Include="Repos\PatientRepo\Test_TransactionRepo.cs" />
+    <Compile Include="Repos\PatientRepo\TestTransactionRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\UserRepo\UserRepo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211281935533_UserCreatedNoVal.resx">
-      <DependentUpon>202211281935533_UserCreatedNoVal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211281942280_UserCreatedWithVal.resx">
-      <DependentUpon>202211281942280_UserCreatedWithVal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211292112200_PatientCreatedWithVal.resx">
-      <DependentUpon>202211292112200_PatientCreatedWithVal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211301716043_DoctorCreatedWithVal.resx">
-      <DependentUpon>202211301716043_DoctorCreatedWithVal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211301846085_DoctorCreatedWithValUserId.resx">
-      <DependentUpon>202211301846085_DoctorCreatedWithValUserId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212011958431_DoctorSeed.resx">
-      <DependentUpon>202212011958431_DoctorSeed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212031919537_abc.resx">
-      <DependentUpon>202212031919537_abc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212051435572_appointment1.resx">
-      <DependentUpon>202212051435572_appointment1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212051506359_appointment2.resx">
-      <DependentUpon>202212051506359_appointment2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212052048303_aaa.resx">
-      <DependentUpon>202212052048303_aaa.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202212052127501_allold.resx">
+      <DependentUpon>202212052127501_allold.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
