@@ -8,36 +8,35 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.DoctorRepo
 {
-    internal class DoctorRepo : Repo,IRepo<Doctor, int, Doctor>
+    internal class AppointmentRepo : Repo, IRepo<Appointment, int, Appointment>
     {
-        
-        public Doctor Add(Doctor obj)
+        public Appointment Add(Appointment obj)
         {
-            db.Doctors.Add(obj);
+            db.Appointments.Add(obj);
             db.SaveChanges();
             return obj;
         }
 
         public bool Delete(int id)
         {
-            var data = db.Doctors.Find(id);
-            db.Doctors.Remove(data);
+            var data = db.Appointments.Find(id);
+            db.Appointments.Remove(data);
             return db.SaveChanges() > 0;
         }
 
-        public Doctor Get(int id)
+        public Appointment Get(int id)
         {
-            return db.Doctors.Find(id);
+            return db.Appointments.Find(id);
         }
 
-        public List<Doctor> Get()
+        public List<Appointment> Get()
         {
-            return db.Doctors.ToList();
+            return db.Appointments.ToList();
         }
 
-        public bool Update(Doctor obj)
+        public bool Update(Appointment obj)
         {
-            var dbobj = db.Doctors.Find(obj.Id);
+            var dbobj = db.Appointments.Find(obj.Id);
             db.Entry(dbobj).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
         }
