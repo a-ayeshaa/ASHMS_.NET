@@ -100,6 +100,20 @@
                 });
             }
             context.Doctors.AddOrUpdate(doctors.ToArray());
+
+            //TEST SEED TABLE
+
+            List<Test> tests = new List<Test>();
+            Random price = new Random();    
+            for (int i = 1; i <= 20; i++)
+            {
+                tests.Add(new Test()
+                {
+                    Name = "Test" + i,
+                    Price = price.Next(1000, 2000)
+                }) ;
+            }
+            context.Tests.AddOrUpdate(tests.ToArray());
         }
     }
 }

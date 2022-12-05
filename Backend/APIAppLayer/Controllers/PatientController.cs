@@ -14,6 +14,7 @@ namespace APIAppLayer.Controllers
 {
     public class PatientController : ApiController
     {
+        //PATIENTS
         [Route("api/patients")]
         [HttpGet]
         public HttpResponseMessage Get()
@@ -99,7 +100,6 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
-
 
     }
 }
