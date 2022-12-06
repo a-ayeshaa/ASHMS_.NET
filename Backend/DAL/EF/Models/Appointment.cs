@@ -18,13 +18,14 @@ namespace DAL.EF.Models
         [Required]
         [ForeignKey("Patient")]
         public int Patient_Id { get; set; }
-        public DateTime startedAt { get; set; }
-        public DateTime endedAt { get; set; }
+        public DateTime? startedAt { get; set; }
+        public DateTime? endedAt { get; set; }
         [Required]
         [StringLength(50)]
         public string status { get; set; }
+        
         [Range(0,double.PositiveInfinity)]
-        public int revisit_count { get; set; }
+        public int? revisit_count { get; set; }
 
         public virtual Doctor Doctor{ get; set; }
         public virtual Patient Patient { get; set; }

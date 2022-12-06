@@ -35,5 +35,9 @@ namespace DAL
         {
             return new TestCartRepo();
         }
+        public static IRepo<Appointment, int, Appointment> AppointmentDataAccess()
+        {
+            return new AppointmentRepo();
+        }
     }
 }

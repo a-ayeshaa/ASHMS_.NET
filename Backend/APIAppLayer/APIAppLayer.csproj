@@ -94,7 +94,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CompositeObject.cs" />
-    <Compile Include="Controllers\DoctorController.cs" />
+    <Compile Include="Controllers\Doctor\AppointmentController.cs" />
+    <Compile Include="Controllers\Doctor\DoctorController.cs" />
     <Compile Include="Controllers\Patient\PatientController.cs" />
     <Compile Include="Controllers\Patient\TestCartController.cs" />
     <Compile Include="Controllers\UserController.cs" />

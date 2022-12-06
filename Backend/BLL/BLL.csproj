@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\AdminDTOs\AdminDTO.cs" />
+    <Compile Include="DTO\DoctorDTOS\AppointmentDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCartDTO.cs" />
     <Compile Include="DTO\UserDTOs\TransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestTransactionDTO.cs" />
     <Compile Include="DTO\UserDTOs\UserDTO.cs" />
+    <Compile Include="Services\DoctorServices\AppointmentServices.cs" />
     <Compile Include="Services\PatientServices\PatientServices.cs" />
     <Compile Include="Services\PatientServices\TestCartServices.cs" />
     <Compile Include="Services\PatientServices\TestTransactionServices.cs" />
