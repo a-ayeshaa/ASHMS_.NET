@@ -3,6 +3,7 @@
     using DAL.EF.Models;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -128,6 +129,25 @@
                 //});
             }
             context.TestCarts.AddOrUpdate(testcart.ToArray());
+
+            //Appointment Seed Table
+            List<Appointment> appointments = new List<Appointment>();
+            Random doc = new Random();
+            Random pat = new Random();
+            string[] astatuses = { "Waiting", "In Session", "Complete" };
+            for (int i = 0; i < 20; i++)
+            {
+                appointments.Add(new Appointment()
+                {
+                    Doctor_Id = doc.Next(1, 11),
+                    Patient_Id = pat.Next(1, 11),
+                    startedAt = DateTime.Now,
+                    endedAt = DateTime.Now,
+                    status = astatuses[doc.Next(0,3)],
+                    revisit_count = 0
+                });
+            }
+            context.Appointments.AddOrUpdate(appointments.ToArray());
         }
     }
 }
