@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class prescription : DbMigration
+    public partial class appointmentFKey : DbMigration
     {
         public override void Up()
         {

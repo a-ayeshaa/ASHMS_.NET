@@ -13,7 +13,7 @@ namespace DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202212090942072_prescription"; }
+            get { return "202212090952388_prescription"; }
         }
         
         string IMigrationMetadata.Source

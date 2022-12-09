@@ -26,9 +26,19 @@ namespace DAL.EF.Models
         
         [Range(0,double.PositiveInfinity)]
         public int? revisit_count { get; set; }
+        //[ForeignKey("Prescription")]
+       // public int? Prescription_Id { get; set; }
 
         public virtual Doctor Doctor{ get; set; }
         public virtual Patient Patient { get; set; }
+        public virtual List<Prescription> Prescription { get; set; }
+
+        public Appointment()
+        {
+            Prescription = new List<Prescription>();
+            Doctor = new Doctor();
+            Patient = new Patient();
+        }
 
     }
 }
