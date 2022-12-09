@@ -41,12 +41,22 @@ namespace BLL.Services.PatientServices
             var total = 0.00f;
             var testcarts = TestCartServices.Get();
             var testcart=(from t in testcarts
-                          where t.Patient_Id == patient_id
+                          where t.Patient_Id == patient_id && t.Test_Transaction_Id==null 
                           select t).ToList();
-            foreach (var t in testcarts)
+            if (testcart.Count == 0)
             {
-                
+                return null;
             }
+            foreach (var t in testcart)
+            {
+                var val = TestCart_TestServices.GetwithTest(t.Test_Id);
+                total += val.Price;
+            }
+
+            obj.Total = total;
+            obj.Status = "Pending";
+            obj.Date = DateTime.Now;
+            obj.Reference = "Self";
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<TestTransaction, TestTransactionDTO>();
@@ -55,12 +65,26 @@ namespace BLL.Services.PatientServices
             var mapper = new Mapper(config);
             var newobj = mapper.Map<TestTransaction>(obj);
             var data = DataAccessFactory.TestTransactionDataAccess().Add(newobj);
-            return mapper.Map<TestTransactionDTO>(data);
+            foreach(var t in testcart)
+            {
+                t.Test_Transaction_Id = newobj.Id;
+                TestCartServices.Update(t);
+            }
+            var testTransaction = mapper.Map<TestTransactionDTO>(data);
+            return testTransaction;
 
         }
 
         public static bool Delete(int id)
         {
+            var carts = TestCartServices.Get();
+            var list = (from c in carts
+                        where c.Test_Transaction_Id == id
+                        select c).ToList();
+            foreach (var l in list)
+            {
+                TestCartServices.Delete(l.Id);
+            }
             return DataAccessFactory.TestTransactionDataAccess().Delete(id);
         }
 
