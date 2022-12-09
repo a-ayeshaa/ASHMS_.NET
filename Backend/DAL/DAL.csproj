@@ -54,6 +54,7 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\ASHMS_Context.cs" />
     <Compile Include="EF\Models\Appointment.cs" />
+    <Compile Include="EF\Models\Prescription.cs" />
     <Compile Include="EF\Models\Transaction.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
     <Compile Include="EF\Models\Patient.cs" />
