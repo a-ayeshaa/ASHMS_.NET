@@ -12,8 +12,7 @@ namespace BLL.DTO.PatientDTOs
     public class TestTransactionDTO
     {
         public int Id { get; set; }
-        [Required]
-        public int Patient_Id { get; set; }
+        
         [Required]
 
         public string Reference { get; set; }

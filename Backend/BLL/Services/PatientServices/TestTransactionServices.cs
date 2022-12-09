@@ -36,8 +36,17 @@ namespace BLL.Services.PatientServices
             return TestTransactions;
         }
 
-        public static TestTransactionDTO Add(TestTransactionDTO obj)
+        public static TestTransactionDTO Add(TestTransactionDTO obj,int patient_id)
         {
+            var total = 0.00f;
+            var testcarts = TestCartServices.Get();
+            var testcart=(from t in testcarts
+                          where t.Patient_Id == patient_id
+                          select t).ToList();
+            foreach (var t in testcarts)
+            {
+                
+            }
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<TestTransaction, TestTransactionDTO>();
@@ -67,5 +76,7 @@ namespace BLL.Services.PatientServices
             var data = DataAccessFactory.TestTransactionDataAccess().Update(newobj);
             return data;
         }
+
+        
     }
 }
