@@ -71,7 +71,10 @@
     <Compile Include="Migrations\202212060912300_appointmetnulladded.designer.cs">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\202212090942072_prescription.cs" />
+    <Compile Include="Migrations\202212090942072_prescription.designer.cs">
+      <DependentUpon>202212090942072_prescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AdminRepo.cs" />
     <Compile Include="Repos\AdminRepo\TestRepo.cs" />
@@ -94,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212060912300_appointmetnulladded.resx">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212090942072_prescription.resx">
+      <DependentUpon>202212090942072_prescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

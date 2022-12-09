@@ -65,7 +65,7 @@ namespace BLL.Services.DoctorServices
             }
         }
 
-        public static DoctorDTO Update(DoctorDTO obj)
+        public static bool Update(DoctorDTO obj)
         {
             var config = new MapperConfiguration(c =>
             {
@@ -75,7 +75,7 @@ namespace BLL.Services.DoctorServices
             var mapper = new Mapper(config);
             var newobj = mapper.Map<Doctor>(obj);
             var data = DataAccessFactory.DoctorDataAccess().Update(newobj);
-            return mapper.Map<DoctorDTO>(data);
+            return data;
         }
     }
 }

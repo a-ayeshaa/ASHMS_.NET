@@ -56,11 +56,11 @@ namespace BLL.Services.DoctorServices
             var appointment = DataAccessFactory.AppointmentDataAccess().Get(id);
 
             
-                return DataAccessFactory.UserDataAccess().Delete(appointment.Id);
+                return DataAccessFactory.AppointmentDataAccess().Delete(appointment.Id);
             
         }
 
-        public static AppointmentDTO Update(AppointmentDTO obj)
+        public static bool Update(AppointmentDTO obj)
         {
             var config = new MapperConfiguration(c =>
             {
@@ -70,7 +70,7 @@ namespace BLL.Services.DoctorServices
             var mapper = new Mapper(config);
             var newobj = mapper.Map<Appointment>(obj);
             var data = DataAccessFactory.AppointmentDataAccess().Update(newobj);
-            return mapper.Map<AppointmentDTO>(data);
+            return data;
         }
     }
 }

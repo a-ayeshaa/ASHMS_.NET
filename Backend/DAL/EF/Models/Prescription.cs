@@ -14,10 +14,10 @@ namespace DAL.EF.Models
         [Required]
         [ForeignKey("appointment")]
         public int Appointment_Id { get; set; }
-        public string Chief_complaint { get; set; }
-        public string On_evaluation { get; set; }
-        public string Deduction { get; set; }
-        public string Advancement { get; set; }
+        public string Chief_complaint { get; set; } //patient kiki shomossha bolse
+        public string On_evaluation { get; set; } //doctor kiki paise
+        public string Deduction { get; set; } //doctor ki suspect kortese
+        public string Advancement { get; set; } //rest, posture change etc [reccomendations]
 
         public virtual Appointment appointment { get; set; }
     }
