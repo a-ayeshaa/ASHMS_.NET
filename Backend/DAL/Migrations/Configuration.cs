@@ -110,6 +110,7 @@
             {
                 tests.Add(new Test()
                 {
+                    Id = i,
                     Name = "Test" + i,
                     Price = price.Next(1000, 2000)
                 }) ;
@@ -122,11 +123,12 @@
             Random p = new Random();
             for (int i = 1; i <= 20; i++)
             {
-                //testcart.Add(new TestCart()
-                //{
-                //    Test_Id = p.Next(1, 21),
-                //    Patient_Id = p.Next(1, 11)
-                //});
+                testcart.Add(new TestCart()
+                {
+                    Id= i,
+                    Test_Id = p.Next(1, 21),
+                    Patient_Id = p.Next(1, 11)
+                });
             }
             context.TestCarts.AddOrUpdate(testcart.ToArray());
 
@@ -143,11 +145,49 @@
                     Patient_Id = pat.Next(1, 11),
                     startedAt = DateTime.Now,
                     endedAt = DateTime.Now,
-                    status = astatuses[doc.Next(0,3)],
+                    status = astatuses[doc.Next(0, 3)],
                     revisit_count = 0
                 });
             }
             context.Appointments.AddOrUpdate(appointments.ToArray());
+            //TestTransaction SEED TABLE
+
+        //    List<TestTransaction> testTransactions = new List<TestTransaction>();
+        //    for (int i = 0; i < 20; i++)
+        //    {
+        //        foreach (var pa in patients)
+        //        {
+
+        //            var total = 0.00f;
+        //            foreach (var test in testcart)
+        //            {
+        //                if (test.Patient_Id == pa.Id)
+        //                {
+        //                    total += 100;
+        //                }
+        //            }
+        //            testTransactions.Add(new TestTransaction()
+        //            {
+        //                Id = i,
+        //                Date = DateTime.Now,
+        //                Reference = "Self",
+        //                Report_Delivered = "False",
+        //                Total = (float)total,
+        //                Status = "Pending"
+        //            }); ;
+        //            foreach (var test in testcart)
+        //            {
+        //                if (test.Patient_Id == pa.Id)
+        //                {
+        //                    test.Test_Transaction_Id = i;
+        //                }
+        //            }
+        //        }
+        //    }
+        //    context.TestTransactions.AddOrUpdate(testTransactions.ToArray());
+        //    context.TestCarts.AddOrUpdate(testcart.ToArray());
         }
+
+
     }
 }

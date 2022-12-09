@@ -98,6 +98,7 @@
     <Compile Include="Controllers\Doctor\DoctorController.cs" />
     <Compile Include="Controllers\Patient\PatientController.cs" />
     <Compile Include="Controllers\Patient\TestCartController.cs" />
+    <Compile Include="Controllers\Patient\TestTransactionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
