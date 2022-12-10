@@ -1,5 +1,6 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
+using DAL.Repos.AdminRepo;
 using DAL.Repos.DoctorRepo;
 using DAL.Repos.PatientRepo;
 using DAL.Repos.UserRepo;
@@ -38,6 +39,16 @@ namespace DAL
         public static IRepo<Appointment, int, Appointment> AppointmentDataAccess()
         {
             return new AppointmentRepo();
+        }
+
+        public static IRepo<Test, int, Test> TestDataAccess()
+        {
+            return new TestRepo();
+        }
+
+        public static IRepo<Medicine, int, Medicine> MedicineDataAccess()
+        {
+            return new MedicineRepo();
         }
     }
 }

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTO\AdminDTOs\AdminDTO.cs" />
+    <Compile Include="DTO\AdminDTOs\MedicineDTO.cs" />
     <Compile Include="DTO\AdminDTOs\TestDTO.cs" />
     <Compile Include="DTO\DoctorDTOS\AppointmentDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientDTO.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="DTO\UserDTOs\TransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestTransactionDTO.cs" />
     <Compile Include="DTO\UserDTOs\UserDTO.cs" />
+    <Compile Include="Services\AdminServices\MedicineServices.cs" />
     <Compile Include="Services\AdminServices\TestServices.cs" />
     <Compile Include="Services\DoctorServices\AppointmentServices.cs" />
     <Compile Include="Services\PatientServices\PatientServices.cs" />
