@@ -90,6 +90,9 @@ namespace BLL.Services.PatientServices
 
         public static bool Update(TestTransactionDTO obj)
         {
+            var item = Get(obj.Id);
+            obj.Total = item.Total;
+            obj.Date = item.Date;
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<TestTransaction, TestTransactionDTO>();

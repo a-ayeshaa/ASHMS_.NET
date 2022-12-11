@@ -54,6 +54,7 @@
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\ASHMS_Context.cs" />
     <Compile Include="EF\Models\Appointment.cs" />
+    <Compile Include="EF\Models\Prescription.cs" />
     <Compile Include="EF\Models\Transaction.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
     <Compile Include="EF\Models\Patient.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="Migrations\202212060912300_appointmetnulladded.cs" />
     <Compile Include="Migrations\202212060912300_appointmetnulladded.designer.cs">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212091028163_apppointment.cs" />
+    <Compile Include="Migrations\202212091028163_apppointment.designer.cs">
+      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212060912300_appointmetnulladded.resx">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212091028163_apppointment.resx">
+      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
