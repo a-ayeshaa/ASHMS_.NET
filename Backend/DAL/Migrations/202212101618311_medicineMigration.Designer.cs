@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class appointmentFKey : IMigrationMetadata
+    public sealed partial class medicineMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(appointmentFKey));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(medicineMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202212091018393_appointmentFKey"; }
+            get { return "202212101618311_medicineMigration"; }
         }
         
         string IMigrationMetadata.Source

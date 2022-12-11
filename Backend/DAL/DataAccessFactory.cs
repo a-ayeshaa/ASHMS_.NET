@@ -1,5 +1,6 @@
 ﻿using DAL.EF.Models;
 using DAL.Interfaces;
+using DAL.Repos.AdminRepo;
 using DAL.Repos.DoctorRepo;
 using DAL.Repos.PatientRepo;
 using DAL.Repos.UserRepo;

@@ -19,6 +19,7 @@ namespace DAL.Repos.PatientRepo
 
         public bool Delete(int id)
         {
+
             var data = db.TestTransactions.Find(id);
             db.TestTransactions.Remove(data);
             return db.SaveChanges() > 0;
