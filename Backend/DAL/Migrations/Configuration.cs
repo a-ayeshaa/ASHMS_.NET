@@ -18,10 +18,10 @@
 
         protected override void Seed(DAL.ASHMS_Context context)
         {
-            ////USER TABLE SEED [PATIENT]
-            //string[] Genders = { "Male", "Female" };
-            //string[] BloodGroups = { "A+", "A-", "AB+", "AB-", "B-", "B+", "O-", "O+" };
-            //List<User> users = new List<User>();
+            //USER TABLE SEED [PATIENT]
+            string[] Genders = { "Male", "Female" };
+            string[] BloodGroups = { "A+", "A-", "AB+", "AB-", "B-", "B+", "O-", "O+" };
+            List<User> users = new List<User>();
 
             //for (int i = 1; i <= 10; i++)
             //{
@@ -204,7 +204,6 @@
             }
             context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
         }
-
 
     }
 }
