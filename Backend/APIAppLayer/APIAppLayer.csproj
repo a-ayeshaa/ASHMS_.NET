@@ -96,6 +96,7 @@
     <Compile Include="Controllers\CompositeObject.cs" />
     <Compile Include="Controllers\Doctor\AppointmentController.cs" />
     <Compile Include="Controllers\Doctor\DoctorController.cs" />
+    <Compile Include="Controllers\Doctor\PrescriptionController.cs" />
     <Compile Include="Controllers\Patient\PatientController.cs" />
     <Compile Include="Controllers\Patient\TestCartController.cs" />
     <Compile Include="Controllers\Patient\TestTransactionController.cs" />

@@ -39,5 +39,9 @@ namespace DAL
         {
             return new AppointmentRepo();
         }
+        public static IRepo<Prescription, int, Prescription> PrescriptionDataAccess()
+        {
+            return new PrescriptionRepo();
+        }
     }
 }
