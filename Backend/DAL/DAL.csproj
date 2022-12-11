@@ -94,6 +94,7 @@
     <Compile Include="Repos\AdminRepo\TransactionRepo.cs" />
     <Compile Include="Repos\DoctorRepo\AppointmentRepo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
+    <Compile Include="Repos\DoctorRepo\PrescriptionRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestTransactionRepo.cs" />

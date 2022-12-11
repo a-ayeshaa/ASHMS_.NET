@@ -77,5 +77,18 @@ namespace BLL.Services.DoctorServices
             var data = DataAccessFactory.DoctorDataAccess().Update(newobj);
             return data;
         }
+        public static void netEarnings()
+        {
+            var data = Get();
+            
+            foreach(var item in data)
+            {
+                var fees = (from i in AppointmentServices.Get()
+                            where item.Id == i.Doctor_Id && i.status == "Complete"
+                            select i).ToList();
+                item.Net_Earnings = item.Appointment_Fees * fees.Count;
+                Update(item);
+            }
+        }
     }
 }

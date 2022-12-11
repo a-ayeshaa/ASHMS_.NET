@@ -19,9 +19,9 @@
         protected override void Seed(DAL.ASHMS_Context context)
         {
             //USER TABLE SEED [PATIENT]
-            //string[] Genders = { "Male", "Female" };
-            //string[] BloodGroups = { "A+", "A-", "AB+", "AB-", "B-", "B+", "O-", "O+" };
-            //List<User> users = new List<User>();
+            string[] Genders = { "Male", "Female" };
+            string[] BloodGroups = { "A+", "A-", "AB+", "AB-", "B-", "B+", "O-", "O+" };
+            List<User> users = new List<User>();
 
             //for (int i = 1; i <= 10; i++)
             //{
@@ -186,6 +186,23 @@
             //    }
             //    context.TestTransactions.AddOrUpdate(testTransactions.ToArray());
             //    context.TestCarts.AddOrUpdate(testcart.ToArray());
+
+            //Appointment Seed Table
+            List<Prescription> prescriptions = new List<Prescription>();
+            Random doc = new Random();
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
+            for (int i = 0; i < 20; i++)
+            {
+                prescriptions.Add(new Prescription()
+                {
+                    Id = i,
+                    Appointment_Id = doc.Next(63,78),
+                    On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
+
+                });
+            }
+            context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
         }
 
     }
