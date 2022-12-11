@@ -27,7 +27,9 @@ namespace APIAppLayer.Controllers
         {
             try
             {
+                DoctorServices.netEarnings();
                 var data = DoctorServices.Get();
+                
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch
