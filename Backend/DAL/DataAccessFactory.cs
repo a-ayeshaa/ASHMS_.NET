@@ -50,5 +50,9 @@ namespace DAL
         {
             return new MedicineRepo();
         }
+        public static IRepo<Account, int, Account> AccountDataAccess()
+        {
+            return new AccountRepo();
+        }
     }
 }
