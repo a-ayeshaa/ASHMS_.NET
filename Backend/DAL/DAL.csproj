@@ -53,7 +53,9 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="EF\ASHMS_Context.cs" />
+    <Compile Include="EF\Models\Account.cs" />
     <Compile Include="EF\Models\Appointment.cs" />
+    <Compile Include="EF\Models\Medicine.cs" />
     <Compile Include="EF\Models\Prescription.cs" />
     <Compile Include="EF\Models\Transaction.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
@@ -75,9 +77,19 @@
     <Compile Include="Migrations\202212091028163_apppointment.designer.cs">
       <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212101618311_medicineMigration.cs" />
+    <Compile Include="Migrations\202212101618311_medicineMigration.designer.cs">
+      <DependentUpon>202212101618311_medicineMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111614558_AccountMigration.cs" />
+    <Compile Include="Migrations\202212111614558_AccountMigration.designer.cs">
+      <DependentUpon>202212111614558_AccountMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminRepo\AccountRepo.cs" />
     <Compile Include="Repos\AdminRepo\AdminRepo.cs" />
+    <Compile Include="Repos\AdminRepo\MedicineRepo.cs" />
     <Compile Include="Repos\AdminRepo\TestRepo.cs" />
     <Compile Include="Repos\AdminRepo\TransactionRepo.cs" />
     <Compile Include="Repos\DoctorRepo\AppointmentRepo.cs" />
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212091028163_apppointment.resx">
       <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212101618311_medicineMigration.resx">
+      <DependentUpon>202212101618311_medicineMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111614558_AccountMigration.resx">
+      <DependentUpon>202212111614558_AccountMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

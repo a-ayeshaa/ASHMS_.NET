@@ -40,11 +40,5 @@ namespace DAL
         {
             return new AppointmentRepo();
         }
-        public static IRepo<Test, int, Test> TestDataAccess()
-        {
-            return new TestRepo();
-        }
-
-
     }
 }
