@@ -76,12 +76,13 @@ namespace APIAppLayer.Controllers
             }
 
         }
-        [Route("api/tests/update")]
+        [Route("api/tests/update/{id}")]
         [HttpPost]
-        public HttpResponseMessage Update(TestDTO test)
+        public HttpResponseMessage Update(TestDTO test,int id)
         {
             try
             {
+                test.Id= id;
                 var data = TestServices.Update(test);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);

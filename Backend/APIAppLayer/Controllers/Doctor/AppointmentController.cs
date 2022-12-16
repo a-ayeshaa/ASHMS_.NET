@@ -82,12 +82,13 @@ namespace APIAppLayer.Controllers.Doctor
             }
 
         }
-        [Route("api/appointments/update")]
+        [Route("api/appointments/update/{id}")]
         [HttpPost]
-        public HttpResponseMessage Update(AppointmentDTO doctor)
+        public HttpResponseMessage Update(int id, AppointmentDTO doctor)
         {
             try
             {
+                doctor.Id = id;
                 var data = AppointmentServices.Update(doctor);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);

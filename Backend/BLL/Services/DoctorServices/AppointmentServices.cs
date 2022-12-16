@@ -56,7 +56,7 @@ namespace BLL.Services.DoctorServices
             var appointment = DataAccessFactory.AppointmentDataAccess().Get(id);
 
             
-                return DataAccessFactory.AppointmentDataAccess().Delete(appointment.Id);
+            return DataAccessFactory.AppointmentDataAccess().Delete(id);
             
         }
 

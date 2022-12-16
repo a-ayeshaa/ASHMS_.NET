@@ -65,7 +65,7 @@ namespace BLL.Services.AdminServices
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<Test, TestDTO>();
-                c.CreateMap<TestDTO, Appointment>();
+                c.CreateMap<TestDTO, Test>();
             });
             var mapper = new Mapper(config);
             var newobj = mapper.Map<Test>(obj);

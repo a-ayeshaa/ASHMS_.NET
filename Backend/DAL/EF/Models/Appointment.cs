@@ -36,8 +36,6 @@ namespace DAL.EF.Models
         public Appointment()
         {
             Prescription = new List<Prescription>();
-            Doctor = new Doctor();
-            Patient = new Patient();
         }
 
     }
