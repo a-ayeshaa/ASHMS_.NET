@@ -37,12 +37,12 @@ namespace DAL.EF.Models
         public virtual List<TestCart> TestCarts { get; set; }
         public virtual List<Doctor> Appointments { get; set; }
 
-        //public virtual List<Transaction> Transactions { get; set; }
+        public virtual List<Transaction> Transactions { get; set; }
         public Patient()
         {
             TestCarts = new List<TestCart>();
             Appointments = new List<Doctor>();
-            //Transactions = new List<Transaction>();
+            Transactions = new List<Transaction>();
         }
     }
 }

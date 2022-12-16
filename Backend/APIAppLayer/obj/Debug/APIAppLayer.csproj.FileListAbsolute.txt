@@ -456,3 +456,6 @@ D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\APIAppLaye
 D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\APIAppLayer\obj\Debug\APIAppLayer.csproj.CopyComplete
 D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\APIAppLayer\obj\Debug\APIAppLayer.dll
 D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\APIAppLayer\obj\Debug\APIAppLayer.pdb
+F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Cors.dll
+F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Http.Cors.dll
+F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Http.Cors.xml
