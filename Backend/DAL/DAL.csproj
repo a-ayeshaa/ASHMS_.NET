@@ -89,6 +89,10 @@
     <Compile Include="Migrations\202212111952312_error.designer.cs">
       <DependentUpon>202212111952312_error.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212161438163_transactionMigration.cs" />
+    <Compile Include="Migrations\202212161438163_transactionMigration.designer.cs">
+      <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AccountRepo.cs" />
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212111952312_error.resx">
       <DependentUpon>202212111952312_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161438163_transactionMigration.resx">
+      <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
