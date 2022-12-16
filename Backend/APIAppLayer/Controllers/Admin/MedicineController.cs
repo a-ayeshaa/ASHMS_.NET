@@ -49,9 +49,9 @@ namespace APIAppLayer.Controllers.Admin
             {
                 if (obj != null)
                 {
-                    var doctorData = MedicineServices.Add(obj);
+                    var medicineData = MedicineServices.Add(obj);
 
-                    return Request.CreateResponse(HttpStatusCode.OK, obj);
+                    return Request.CreateResponse(HttpStatusCode.OK, medicineData);
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new { });
             }
@@ -76,12 +76,13 @@ namespace APIAppLayer.Controllers.Admin
             }
 
         }
-        [Route("api/medicines/update")]
+        [Route("api/medicines/update/{id}")]
         [HttpPost]
-        public HttpResponseMessage Update(MedicineDTO test)
+        public HttpResponseMessage Update(MedicineDTO test,int id)
         {
             try
             {
+                test.ID = id;
                 var data = MedicineServices.Update(test);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);

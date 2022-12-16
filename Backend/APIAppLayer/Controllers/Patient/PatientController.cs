@@ -91,6 +91,7 @@ namespace APIAppLayer.Controllers.Patient
         {
             try
             {
+                data.Id = id;
                 var obj = PatientServices.Update(data);
                 return Request.CreateResponse(HttpStatusCode.OK, obj);
 

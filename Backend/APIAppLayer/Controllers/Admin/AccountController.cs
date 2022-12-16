@@ -76,12 +76,13 @@ namespace APIAppLayer.Controllers.Admin
             }
 
         }
-        [Route("api/accounts/update")]
+        [Route("api/accounts/update/{id}")]
         [HttpPost]
-        public HttpResponseMessage Update(AccountDTO Account)
+        public HttpResponseMessage Update(AccountDTO Account,int id)
         {
             try
             {
+                Account.Id=id;
                 var data = AccountServices.Update(Account);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
