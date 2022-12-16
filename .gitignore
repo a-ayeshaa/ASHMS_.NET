@@ -1,4 +1,5 @@
-/Backend/APIAppLayer/.vs
+/Backend/APIAppLayer/.vs/ASHMS/config
+/Backend/APIAppLayer/bin
 /Backend/APIAppLayer/obj/Debug
 /Backend/BLL/obj/Debug
 /Backend/DAL/obj/Debug
