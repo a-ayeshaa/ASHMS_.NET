@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Admin
 {
+    [EnableCors("*","*","*")]
     public class MedicineController : ApiController
     {
         [Route("api/medicines")]
@@ -82,7 +84,7 @@ namespace APIAppLayer.Controllers.Admin
         {
             try
             {
-                test.ID = id;
+                test.Id = id;
                 var data = MedicineServices.Update(test);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
