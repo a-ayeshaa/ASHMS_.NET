@@ -1,35 +1,24 @@
 ﻿using BLL.DTO.DoctorDTOS;
-using BLL.DTO.UserDTOs;
 using BLL.Services.DoctorServices;
-using BLL.Services.PatientServices;
-using BLL.Services.UserServices;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Runtime.InteropServices;
 using System.Web.Http;
-using System.Web.UI.WebControls;
 
-namespace APIAppLayer.Controllers
+namespace APIAppLayer.Controllers.Doctor
 {
-    public class DoctorController : ApiController
+    public class PrescriptionController : ApiController
     {
-        [Route("api/doctors")]
+        [Route("api/prescriptions")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
             try
             {
-                DoctorServices.netEarnings();
-                var data = DoctorServices.Get();
-                
+
+                var data = PrescriptionServices.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch
@@ -37,13 +26,13 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
-        [Route("api/doctors/{id}")]
+        [Route("api/prescriptions/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
             try
             {
-                var data = DoctorServices.Get(id);
+                var data = PrescriptionServices.Get(id);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -52,21 +41,21 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
-        [Route("api/doctors/add")]
+        [Route("api/prescriptions/add")]
         [HttpPost]
-        public HttpResponseMessage Add([FromBody]CompositeObject json)
+        public HttpResponseMessage Add(PrescriptionDTO obj)
         {
             try
             {
-                UserDTO user = json.User;
-                DoctorDTO doc = json.Doctor;
+                //PrescriptionDTO user = json.;
+                //DoctorDTO doc = json.Doctor;
 
-                if (user != null && doc!= null)
+                if (obj != null)
                 {
-                    var userData = UserServices.Add(user);
-                    var doctorData = DoctorServices.Add(doc);
+                    //var userData = UserServices.Add(user);
+                    var Data = PrescriptionServices.Add(obj);
 
-                    return Request.CreateResponse(HttpStatusCode.OK, user);
+                    return Request.CreateResponse(HttpStatusCode.OK, Data);
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest, new { });
             }
@@ -75,13 +64,13 @@ namespace APIAppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
-        [Route("api/doctors/delete/{id}")]
+        [Route("api/prescriptions/delete/{id}")]
         [HttpGet]
         public HttpResponseMessage Delete(int id)
         {
             try
             {
-                var data = DoctorServices.Delete(id);
+                var data = PrescriptionServices.Delete(id);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -91,13 +80,13 @@ namespace APIAppLayer.Controllers
             }
 
         }
-        [Route("api/doctors/update")]
+        [Route("api/prescriptions/update")]
         [HttpPost]
-        public HttpResponseMessage Update(DoctorDTO doctor)
+        public HttpResponseMessage Update(PrescriptionDTO doctor)
         {
             try
             {
-                var data = DoctorServices.Update(doctor);
+                var data = PrescriptionServices.Update(doctor);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -107,6 +96,5 @@ namespace APIAppLayer.Controllers
             }
 
         }
-
     }
 }

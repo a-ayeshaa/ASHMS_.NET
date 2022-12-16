@@ -40,19 +40,21 @@ namespace DAL
         {
             return new AppointmentRepo();
         }
-
-        public static IRepo<Test, int, Test> TestDataAccess()
+        public static IRepo<Prescription, int, Prescription> PrescriptionDataAccess()
         {
-            return new TestRepo();
-        }
-
-        public static IRepo<Medicine, int, Medicine> MedicineDataAccess()
-        {
-            return new MedicineRepo();
+            return new PrescriptionRepo();
         }
         public static IRepo<Account, int, Account> AccountDataAccess()
         {
             return new AccountRepo();
+        }
+        public static IRepo<Medicine, int, Medicine> MedicineDataAccess()
+        {
+            return new MedicineRepo();
+        }
+        public static IRepo<Test, int, Test> TestDataAccess()
+        {
+            return new TestRepo();
         }
     }
 }

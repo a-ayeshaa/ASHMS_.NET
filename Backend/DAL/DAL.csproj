@@ -73,13 +73,9 @@
     <Compile Include="Migrations\202212060912300_appointmetnulladded.designer.cs">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212090952388_prescription.cs" />
-    <Compile Include="Migrations\202212090952388_prescription.designer.cs">
-      <DependentUpon>202212090952388_prescription.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212091018393_appointmentFKey.cs" />
-    <Compile Include="Migrations\202212091018393_appointmentFKey.designer.cs">
-      <DependentUpon>202212091018393_appointmentFKey.cs</DependentUpon>
+    <Compile Include="Migrations\202212091028163_apppointment.cs" />
+    <Compile Include="Migrations\202212091028163_apppointment.designer.cs">
+      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202212101618311_medicineMigration.cs" />
     <Compile Include="Migrations\202212101618311_medicineMigration.designer.cs">
@@ -98,6 +94,7 @@
     <Compile Include="Repos\AdminRepo\TransactionRepo.cs" />
     <Compile Include="Repos\DoctorRepo\AppointmentRepo.cs" />
     <Compile Include="Repos\DoctorRepo\DoctorRepo.cs" />
+    <Compile Include="Repos\DoctorRepo\PrescriptionRepo.cs" />
     <Compile Include="Repos\PatientRepo\PatientRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestTransactionRepo.cs" />
@@ -115,11 +112,8 @@
     <EmbeddedResource Include="Migrations\202212060912300_appointmetnulladded.resx">
       <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212090952388_prescription.resx">
-      <DependentUpon>202212090952388_prescription.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212091018393_appointmentFKey.resx">
-      <DependentUpon>202212091018393_appointmentFKey.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212091028163_apppointment.resx">
+      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212101618311_medicineMigration.resx">
       <DependentUpon>202212101618311_medicineMigration.cs</DependentUpon>
