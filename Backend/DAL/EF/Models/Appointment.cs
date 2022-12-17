@@ -32,10 +32,12 @@ namespace DAL.EF.Models
         public virtual Doctor Doctor{ get; set; }
         public virtual Patient Patient { get; set; }
         public virtual List<Prescription> Prescription { get; set; }
+        public virtual List<Transaction> Transaction { get; set; }
 
         public Appointment()
         {
             Prescription = new List<Prescription>();
+            Transaction = new List<Transaction>();
         }
 
     }

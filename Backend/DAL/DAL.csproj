@@ -80,45 +80,9 @@
     <Compile Include="EF\Models\TestTransaction.cs" />
     <Compile Include="EF\Models\User.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202212052127501_allold.cs" />
-    <Compile Include="Migrations\202212052127501_allold.designer.cs">
-      <DependentUpon>202212052127501_allold.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212060912300_appointmetnulladded.cs" />
-    <Compile Include="Migrations\202212060912300_appointmetnulladded.designer.cs">
-      <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212091028163_apppointment.cs" />
-    <Compile Include="Migrations\202212091028163_apppointment.designer.cs">
-      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212101618311_medicineMigration.cs" />
-    <Compile Include="Migrations\202212101618311_medicineMigration.designer.cs">
-      <DependentUpon>202212101618311_medicineMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111614558_AccountMigration.cs" />
-    <Compile Include="Migrations\202212111614558_AccountMigration.designer.cs">
-      <DependentUpon>202212111614558_AccountMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212111952312_error.cs" />
-    <Compile Include="Migrations\202212111952312_error.designer.cs">
-      <DependentUpon>202212111952312_error.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212161438163_transactionMigration.cs" />
-    <Compile Include="Migrations\202212161438163_transactionMigration.designer.cs">
-      <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212170603156_fixdoctor.cs" />
-    <Compile Include="Migrations\202212170603156_fixdoctor.designer.cs">
-      <DependentUpon>202212170603156_fixdoctor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212170609199_fixdoctor1.cs" />
-    <Compile Include="Migrations\202212170609199_fixdoctor1.designer.cs">
-      <DependentUpon>202212170609199_fixdoctor1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212170810037_fixdoctor2.cs" />
-    <Compile Include="Migrations\202212170810037_fixdoctor2.designer.cs">
-      <DependentUpon>202212170810037_fixdoctor2.cs</DependentUpon>
+    <Compile Include="Migrations\202212171054194_ALLModels.cs" />
+    <Compile Include="Migrations\202212171054194_ALLModels.designer.cs">
+      <DependentUpon>202212171054194_ALLModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,35 +105,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212052127501_allold.resx">
-      <DependentUpon>202212052127501_allold.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212060912300_appointmetnulladded.resx">
-      <DependentUpon>202212060912300_appointmetnulladded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212091028163_apppointment.resx">
-      <DependentUpon>202212091028163_apppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212101618311_medicineMigration.resx">
-      <DependentUpon>202212101618311_medicineMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111614558_AccountMigration.resx">
-      <DependentUpon>202212111614558_AccountMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212111952312_error.resx">
-      <DependentUpon>202212111952312_error.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212161438163_transactionMigration.resx">
-      <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212170603156_fixdoctor.resx">
-      <DependentUpon>202212170603156_fixdoctor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212170609199_fixdoctor1.resx">
-      <DependentUpon>202212170609199_fixdoctor1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212170810037_fixdoctor2.resx">
-      <DependentUpon>202212170810037_fixdoctor2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212171054194_ALLModels.resx">
+      <DependentUpon>202212171054194_ALLModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

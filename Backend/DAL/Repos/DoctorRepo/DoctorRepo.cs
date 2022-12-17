@@ -32,6 +32,7 @@ namespace DAL.Repos.DoctorRepo
 
         public List<Doctor> Get()
         {
+
             return db.Doctors.ToList();
         }
 
