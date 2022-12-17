@@ -108,6 +108,18 @@
     <Compile Include="Migrations\202212161438163_transactionMigration.designer.cs">
       <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212170603156_fixdoctor.cs" />
+    <Compile Include="Migrations\202212170603156_fixdoctor.designer.cs">
+      <DependentUpon>202212170603156_fixdoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212170609199_fixdoctor1.cs" />
+    <Compile Include="Migrations\202212170609199_fixdoctor1.designer.cs">
+      <DependentUpon>202212170609199_fixdoctor1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212170810037_fixdoctor2.cs" />
+    <Compile Include="Migrations\202212170810037_fixdoctor2.designer.cs">
+      <DependentUpon>202212170810037_fixdoctor2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AccountRepo.cs" />
@@ -149,6 +161,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212161438163_transactionMigration.resx">
       <DependentUpon>202212161438163_transactionMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212170603156_fixdoctor.resx">
+      <DependentUpon>202212170603156_fixdoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212170609199_fixdoctor1.resx">
+      <DependentUpon>202212170609199_fixdoctor1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212170810037_fixdoctor2.resx">
+      <DependentUpon>202212170810037_fixdoctor2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

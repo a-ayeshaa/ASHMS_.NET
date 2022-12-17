@@ -15,10 +15,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.UI.WebControls;
 
 namespace APIAppLayer.Controllers
 {
+    [EnableCors("*", "*", "*")]
+
     public class DoctorController : ApiController
     {
         [Route("api/doctors")]

@@ -40,11 +40,11 @@ namespace DAL.EF.Models
 
 
         public virtual List<Transaction> Transactions { get; set; }
-        public virtual List<Doctor> Appointments { get; set; }
+        public virtual List<Appointment> Appointments { get; set; }
         public Doctor()
         {
             Transactions = new List<Transaction>();
-            Appointments = new List<Doctor>();
+            Appointments = new List<Appointment>();
         }
     }
 }

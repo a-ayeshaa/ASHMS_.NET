@@ -459,3 +459,6 @@ D:\University\Semester 9\.NET\.NET final\project\NEW\pullRepo\Backend\APIAppLaye
 F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Cors.dll
 F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Http.Cors.dll
 F:\10th semester\dot net\Backend\APIAppLayer\bin\System.Web.Http.Cors.xml
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\APIAppLayer\bin\System.Web.Cors.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\APIAppLayer\bin\System.Web.Http.Cors.dll
+D:\Semester 10\.NET\PROJECTTTTTT\Backend\APIAppLayer\bin\System.Web.Http.Cors.xml
