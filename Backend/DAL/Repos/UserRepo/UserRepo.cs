@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.UserRepo
 {
-    internal class UserRepo:IRepo<User,int,User>
+    internal class UserRepo:Repo,IRepo<User,int,User>,IAuth
     {
-        ASHMS_Context db;
-        public UserRepo()
+        public User Authenticate(string name, string pass)
         {
-            db = new ASHMS_Context();
+            var data = db.Users.FirstOrDefault(u => u.Username.Equals(name) && u.Password.Equals(pass));
+            if (data != null)
+            {
+                return data;
+            }
+            return null;
         }
         public User Add(User obj)
         {

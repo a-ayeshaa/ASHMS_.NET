@@ -12,7 +12,7 @@ namespace BLL.Services.UserServices
 {
     public class TokenServices
     {
-        public static TokenDTO Get(int id)
+        public static TokenDTO Get(string id)
         {
             var data = DataAccessFactory.TokenDataAccess().Get(id);
             var config = new MapperConfiguration(c =>
@@ -50,7 +50,7 @@ namespace BLL.Services.UserServices
 
         }
 
-        public static bool Delete(int id)
+        public static bool Delete(string id)
         {
             return DataAccessFactory.TokenDataAccess().Delete(id);
         }

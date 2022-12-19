@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.EF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DAL.Interfaces
 {
     public interface IAuth
     {
-        bool Authenticate(string uname, string pass);
+        User Authenticate(string uname, string pass);
 
     }
 }

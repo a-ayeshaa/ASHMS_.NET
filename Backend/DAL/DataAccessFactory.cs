@@ -64,5 +64,10 @@ namespace DAL
         {
             return new TokenRepo();
         }
+
+        public static IAuth AuthDataAccess()
+        {
+            return new UserRepo();
+        }
     }
 }

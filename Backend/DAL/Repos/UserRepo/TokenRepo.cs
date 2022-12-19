@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos.UserRepo
 {
-    internal class TokenRepo:Repo,IRepo<Token,string,Token>
+    internal class TokenRepo:Repo,IRepo<Token,string,Token> 
     {
+        
         public Token Add(Token obj)
         {
             db.Tokens.Add(obj);
@@ -19,14 +20,14 @@ namespace DAL.Repos.UserRepo
 
         public bool Delete(string Tokenname)
         {
-            var data = db.Tokens.Find(Tokenname);
+            var data = db.Tokens.FirstOrDefault(token => token.token.Equals(Tokenname));
             db.Tokens.Remove(data);
             return db.SaveChanges() > 0;
         }
 
         public Token Get(string Tokenname)
         {
-            return db.Tokens.Find(Tokenname);
+            return db.Tokens.FirstOrDefault(token=>token.token.Equals(Tokenname));
         }
 
         public List<Token> Get()
