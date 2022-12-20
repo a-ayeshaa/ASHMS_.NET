@@ -98,9 +98,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AuthFilter\Logged.cs" />
     <Compile Include="Controllers\Admin\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\Admin\MedicineController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CompositeObject.cs" />
     <Compile Include="Controllers\Doctor\AppointmentController.cs" />
     <Compile Include="Controllers\Doctor\DoctorController.cs" />

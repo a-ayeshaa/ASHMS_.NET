@@ -23,7 +23,6 @@ namespace DAL
         {
             return new DoctorRepo();
         }
-        //PATIENT DATA ACCESS-->AYESHA
         public static IRepo<Patient, int, Patient> PatientDataAccess()
         {
             return new PatientRepo();
@@ -59,6 +58,16 @@ namespace DAL
         public static IRepo<Test, int, Test> TestDataAccess()
         {
             return new TestRepo();
+        }
+
+        public static IRepo<Token, string, Token> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
+
+        public static IAuth AuthDataAccess()
+        {
+            return new UserRepo();
         }
     }
 }

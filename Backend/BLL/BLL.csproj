@@ -55,6 +55,8 @@
     <Compile Include="DTO\PatientDTOs\TestCartDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCart_TransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCart_TestDTO.cs" />
+    <Compile Include="DTO\UserDTOs\LoginDTO.cs" />
+    <Compile Include="DTO\UserDTOs\TokenDTO.cs" />
     <Compile Include="DTO\UserDTOs\TransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestTransactionDTO.cs" />
     <Compile Include="DTO\UserDTOs\UserDTO.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="Services\PatientServices\TestCart_TestServices.cs" />
     <Compile Include="Services\PatientServices\TestCart_TransactionServices.cs" />
     <Compile Include="Services\PatientServices\TestTransactionServices.cs" />
+    <Compile Include="Services\UserServices\AuthServices.cs" />
+    <Compile Include="Services\UserServices\TokenServices.cs" />
     <Compile Include="Services\UserServices\UserServices.cs" />
     <Compile Include="DTO\DoctorDTOS\DoctorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

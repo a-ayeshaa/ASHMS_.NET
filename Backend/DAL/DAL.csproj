@@ -72,6 +72,7 @@
     <Compile Include="EF\Models\Appointment.cs" />
     <Compile Include="EF\Models\Medicine.cs" />
     <Compile Include="EF\Models\Prescription.cs" />
+    <Compile Include="EF\Models\Token.cs" />
     <Compile Include="EF\Models\Transaction.cs" />
     <Compile Include="EF\Models\Doctor.cs" />
     <Compile Include="EF\Models\Patient.cs" />
@@ -79,10 +80,15 @@
     <Compile Include="EF\Models\TestCart.cs" />
     <Compile Include="EF\Models\TestTransaction.cs" />
     <Compile Include="EF\Models\User.cs" />
+    <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202212171054194_ALLModels.cs" />
     <Compile Include="Migrations\202212171054194_ALLModels.designer.cs">
       <DependentUpon>202212171054194_ALLModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212181418486_Tokentableadded.cs" />
+    <Compile Include="Migrations\202212181418486_Tokentableadded.designer.cs">
+      <DependentUpon>202212181418486_Tokentableadded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +104,7 @@
     <Compile Include="Repos\PatientRepo\TestCartRepo.cs" />
     <Compile Include="Repos\PatientRepo\TestTransactionRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\UserRepo\TokenRepo.cs" />
     <Compile Include="Repos\UserRepo\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +114,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212171054194_ALLModels.resx">
       <DependentUpon>202212171054194_ALLModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212181418486_Tokentableadded.resx">
+      <DependentUpon>202212181418486_Tokentableadded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

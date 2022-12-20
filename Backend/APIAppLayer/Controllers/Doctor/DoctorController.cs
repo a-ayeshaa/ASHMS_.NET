@@ -1,4 +1,5 @@
-﻿using BLL.DTO.DoctorDTOS;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.DoctorDTOS;
 using BLL.DTO.UserDTOs;
 using BLL.Services.DoctorServices;
 using BLL.Services.PatientServices;
@@ -21,6 +22,7 @@ using System.Web.UI.WebControls;
 namespace APIAppLayer.Controllers
 {
     [EnableCors("*", "*", "*")]
+    [Logged]
 
     public class DoctorController : ApiController
     {
