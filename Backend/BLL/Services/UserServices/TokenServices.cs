@@ -17,7 +17,7 @@ namespace BLL.Services.UserServices
             var data = DataAccessFactory.TokenDataAccess().Get(id);
             var config = new MapperConfiguration(c =>
             {
-                c.CreateMap<User, TokenDTO>();
+                c.CreateMap<Token, TokenDTO>();
             });
             var mapper = new Mapper(config);
             var Token = mapper.Map<TokenDTO>(data);

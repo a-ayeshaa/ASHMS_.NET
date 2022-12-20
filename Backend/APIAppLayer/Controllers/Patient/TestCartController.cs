@@ -1,4 +1,5 @@
-﻿using BLL.DTO.PatientDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.PatientDTOs;
 using BLL.Services.PatientServices;
 using BLL.Services.UserServices;
 using System;
@@ -7,9 +8,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Patient
 {
+    [EnableCors("*", "*", "*")]
+    [Logged]
     public class TestCartController : ApiController
     {
         [Route("api/testcarts")]
@@ -62,6 +66,8 @@ namespace APIAppLayer.Controllers.Patient
         {
             try
             {
+                var token = TokenServices.Get(Request.Headers.Authorization.ToString());
+                data.Patient_Id = PatientUserServices.GetwithPatient(token.User_Id).PatientDTO.Id;
                 var testcartData = TestCartServices.Add(data);
                 return Request.CreateResponse(HttpStatusCode.OK, testcartData);
 
