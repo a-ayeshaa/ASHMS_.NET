@@ -133,41 +133,41 @@
             //context.TestCarts.AddOrUpdate(testcart.ToArray());
 
             //Appointment Seed Table
-            List<Appointment> appointments = new List<Appointment>();
-            Random doc = new Random();
-            Random pat = new Random();
-            string[] astatuses = { "Waiting", "In Session", "Complete" };
-            for (int i = 0; i < 20; i++)
-            {
-                appointments.Add(new Appointment()
-                {
-                    Doctor_Id = doc.Next(1, 11),
-                    Patient_Id = pat.Next(2, 12),
-                    startedAt = DateTime.Now,
-                    endedAt = DateTime.Now,
-                    status = astatuses[doc.Next(0, 3)],
-                    revisit_count = 0
-                });
-            }
-            context.Appointments.AddOrUpdate(appointments.ToArray());
-
-
-            //Appointment Seed Table
-            //List<Prescription> prescriptions = new List<Prescription>();
-            //Random docc = new Random();
-            ////Random pat = new Random();
-            ////string[] astatuses = { "Waiting", "In Session", "Complete" };
+            //List<Appointment> appointments = new List<Appointment>();
+            //Random doc = new Random();
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
             //for (int i = 0; i < 20; i++)
             //{
-            //    prescriptions.Add(new Prescription()
+            //    appointments.Add(new Appointment()
             //    {
-            //        Id = i,
-            //        Appointment_Id = docc.Next(63, 78),
-            //        On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
-
+            //        Doctor_Id = doc.Next(1, 11),
+            //        Patient_Id = pat.Next(1, 11),
+            //        startedAt = DateTime.Now,
+            //        endedAt = DateTime.Now,
+            //        status = astatuses[doc.Next(0, 3)],
+            //        revisit_count = 0
             //    });
             //}
-            //context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
+            //context.Appointments.AddOrUpdate(appointments.ToArray());
+
+
+            //prescription Seed Table
+            List<Prescription> prescriptions = new List<Prescription>();
+            Random docc = new Random();
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
+            for (int i = 0; i < 20; i++)
+            {
+                prescriptions.Add(new Prescription()
+                {
+                    Id = i,
+                    Appointment_Id = docc.Next(21, 41),
+                    On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
+
+                });
+            }
+            context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
         }
 
     }
