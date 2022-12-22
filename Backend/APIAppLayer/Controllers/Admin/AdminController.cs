@@ -1,4 +1,5 @@
-﻿using BLL.DTO.AdminDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.AdminDTOs;
 using BLL.Services.AdminServices;
 using System;
 using System.Collections.Generic;
@@ -6,9 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers
 {
+    [EnableCors("*", "*", "*")]
+    [Logged]
     public class AdminController : ApiController
     {
         [Route("api/tests")]

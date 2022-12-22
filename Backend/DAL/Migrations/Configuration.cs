@@ -153,21 +153,21 @@
 
 
             //prescription Seed Table
-            List<Prescription> prescriptions = new List<Prescription>();
-            Random docc = new Random();
-            //Random pat = new Random();
-            //string[] astatuses = { "Waiting", "In Session", "Complete" };
-            for (int i = 0; i < 20; i++)
-            {
-                prescriptions.Add(new Prescription()
-                {
-                    Id = i,
-                    Appointment_Id = docc.Next(21, 41),
-                    On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
+            //List<Prescription> prescriptions = new List<Prescription>();
+            //Random docc = new Random();
+            ////Random pat = new Random();
+            ////string[] astatuses = { "Waiting", "In Session", "Complete" };
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    prescriptions.Add(new Prescription()
+            //    {
+            //        Id = i,
+            //        Appointment_Id = docc.Next(21, 41),
+            //        On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
 
-                });
-            }
-            context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
+            //    });
+            //}
+            //context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using BLL.DTO.PatientDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.PatientDTOs;
 using BLL.Services.PatientServices;
 using BLL.Services.UserServices;
 using System;
@@ -7,24 +8,27 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Patient
 {
+    [EnableCors("*", "*", "*")]
+    [Logged]
     public class TestCartController : ApiController
     {
         [Route("api/testcarts")]
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            try
-            {
+            //try
+            //{
                 var data = TestCartServices.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
-            catch
-            {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
-            }
+            //}
+            //catch
+            //{
+            //    return Request.CreateResponse(HttpStatusCode.NotFound);
+            //}
         }
         [Route("api/testcarts/{id}")]
         [HttpGet]
