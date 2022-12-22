@@ -20,16 +20,16 @@ namespace APIAppLayer.Controllers.Patient
         [HttpGet]
         public HttpResponseMessage Get()
         {
-            //try
-            //{
+            try
+            {
                 var data = TestCartServices.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
-            //}
-            //catch
-            //{
-            //    return Request.CreateResponse(HttpStatusCode.NotFound);
-            //}
         }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+}
         [Route("api/testcarts/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
