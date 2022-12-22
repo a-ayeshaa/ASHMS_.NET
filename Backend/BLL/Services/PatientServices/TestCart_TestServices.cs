@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using BLL.DTO.AdminDTOs;
 using BLL.DTO.PatientDTOs;
+using BLL.Services.AdminServices;
 using DAL;
 using DAL.EF.Models;
 using System;
@@ -22,8 +24,27 @@ namespace BLL.Services.PatientServices
 
             });
             var mapper = new Mapper(config);
-            return mapper.Map<TestCart_TestDTO>(data);
+            var result= mapper.Map<TestCart_TestDTO>(data);
+            return result;
 
         }
+
+        public static Test_TestCartDTO GetwithTestDetail(int id)
+        {
+            var data = DataAccessFactory.TestCartDataAccess().Get(id);
+            var test = TestServices.Get(data.Test.Id);
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<TestCart, Test_TestCartDTO>();
+                c.CreateMap<Test, TestDTO>();
+
+            });
+            var mapper = new Mapper(config);
+            var result = mapper.Map<Test_TestCartDTO>(data);
+            result.TestDTO = test;
+            return result;
+
+        }
+
     }
 }

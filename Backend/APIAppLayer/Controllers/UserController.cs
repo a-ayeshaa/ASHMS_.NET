@@ -10,7 +10,6 @@ using System.Web.Http.Cors;
 namespace APIAppLayer.Controllers
 {
     [EnableCors("*", "*", "*")]
-
     public class UserController : ApiController
     {
         [Route("api/users")]

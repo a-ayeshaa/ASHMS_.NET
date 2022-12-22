@@ -9,7 +9,6 @@ namespace APIAppLayer
     {
         public static void Register(HttpConfiguration config)
         {
-            config.EnableCors();
             // Web API configuration and services
 
             // Web API routes
@@ -20,6 +19,9 @@ namespace APIAppLayer
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.EnableCors();
+
         }
     }
 }

@@ -73,5 +73,7 @@ namespace BLL.Services.PatientServices
             var data = DataAccessFactory.PatientDataAccess().Update(newobj);
             return data;
         }
+
+        
     }
 }

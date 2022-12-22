@@ -74,7 +74,7 @@ namespace APIAppLayer.Controllers.Patient
             }
             catch
             {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
+                return Request.CreateResponse(HttpStatusCode.OK,"ERROR");
             }
         }
         [Route("api/testcarts/update/{id}")]

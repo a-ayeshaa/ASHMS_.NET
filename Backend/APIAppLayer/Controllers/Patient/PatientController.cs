@@ -1,4 +1,5 @@
-﻿using BLL.DTO.PatientDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.PatientDTOs;
 using BLL.Services.DoctorServices;
 using BLL.Services.PatientServices;
 using BLL.Services.UserServices;
@@ -14,7 +15,7 @@ using System.Web.Http.Cors;
 namespace APIAppLayer.Controllers.Patient
 {
     [EnableCors("*", "*", "*")]
-
+    [Logged]
     public class PatientController : ApiController
     {
         //PATIENTS
@@ -97,6 +98,23 @@ namespace APIAppLayer.Controllers.Patient
                 data.Id = id;
                 var obj = PatientServices.Update(data);
                 return Request.CreateResponse(HttpStatusCode.OK, obj);
+
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+
+        [Route("api/patient/{token}")]
+        [HttpGet]
+        public HttpResponseMessage PatientDetails(string token)
+        {
+            try
+            {
+                var user = TokenServices.Get(token);
+                var patient = PatientUserServices.GetwithPatient(user.User_Id);
+                return Request.CreateResponse(HttpStatusCode.OK, patient);
 
             }
             catch
