@@ -24,12 +24,12 @@ namespace APIAppLayer.Controllers.Patient
             {
                 var data = TestCartServices.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
-            }
+        }
             catch
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
-        }
+}
         [Route("api/testcarts/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
