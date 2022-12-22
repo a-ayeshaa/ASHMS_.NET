@@ -66,13 +66,15 @@ namespace APIAppLayer.Controllers.Patient
         {
             try
             {
+                var token = TokenServices.Get(Request.Headers.Authorization.ToString());
+                data.Patient_Id = PatientUserServices.GetwithPatient(token.User_Id).PatientDTO.Id;
                 var testcartData = TestCartServices.Add(data);
                 return Request.CreateResponse(HttpStatusCode.OK, testcartData);
 
             }
             catch
             {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
+                return Request.CreateResponse(HttpStatusCode.OK,"ERROR");
             }
         }
         [Route("api/testcarts/update/{id}")]
