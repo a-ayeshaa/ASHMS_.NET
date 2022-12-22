@@ -37,10 +37,24 @@ namespace BLL.Services.PatientServices
             var data = GetwithPatient(patient_id);
             foreach (var testcart in data)
             {
-                var test = TestCart_TestServices.GetwithTestDetail(testcart.Id);
-                result.Add(test);
+                if (testcart.Test_Transaction_Id == null)
+                {
+                    var test = TestCart_TestServices.GetwithTestDetail(testcart.Id);
+                    result.Add(test);
+                }
             }
             return result;
+        }
+
+        public static float GetTotal(int patient_id)
+        {
+            var result = GetwithPatientandTest(patient_id);
+            float total = 0.00f;
+            foreach(var price in result)
+            {
+                total+=price.Price;
+            }    
+            return total;
         }
     }
 }

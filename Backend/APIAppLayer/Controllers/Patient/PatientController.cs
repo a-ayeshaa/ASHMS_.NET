@@ -106,13 +106,14 @@ namespace APIAppLayer.Controllers.Patient
             }
         }
 
-        [Route("api/patient/{token}")]
+        [Route("api/patient/details")]
         [HttpGet]
-        public HttpResponseMessage PatientDetails(string token)
+        public HttpResponseMessage PatientDetails()
         {
             try
             {
-                var user = TokenServices.Get(token);
+                
+                var user = TokenServices.Get(Request.Headers.Authorization.ToString());
                 var patient = PatientUserServices.GetwithPatient(user.User_Id);
                 return Request.CreateResponse(HttpStatusCode.OK, patient);
 
