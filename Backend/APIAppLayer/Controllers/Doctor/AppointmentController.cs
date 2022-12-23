@@ -1,4 +1,5 @@
-﻿using BLL.DTO.DoctorDTOS;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.DoctorDTOS;
 using BLL.DTO.UserDTOs;
 using BLL.Services.DoctorServices;
 using BLL.Services.UserServices;
@@ -8,9 +9,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Doctor
 {
+    [EnableCors("*", "*", "*")]
+    [Logged]
     public class AppointmentController : ApiController
     {
         [Route("api/appointments")]
