@@ -36,6 +36,7 @@ namespace DAL.EF.Models
 
         public virtual List<TestCart> TestCarts { get; set; }
         public virtual List<Appointment> Appointments { get; set; }
+        public virtual List<TestTransaction> TestTransactions { get; set; }
 
         public virtual List<Transaction> Transactions { get; set; }
         public Patient()
@@ -43,6 +44,7 @@ namespace DAL.EF.Models
             TestCarts = new List<TestCart>();
             Appointments = new List<Appointment>();
             Transactions = new List<Transaction>();
+            TestTransactions = new List<TestTransaction>();
         }
     }
 }

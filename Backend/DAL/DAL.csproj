@@ -90,6 +90,10 @@
     <Compile Include="Migrations\202212181418486_Tokentableadded.designer.cs">
       <DependentUpon>202212181418486_Tokentableadded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212230825283_testtransactionupdated.cs" />
+    <Compile Include="Migrations\202212230825283_testtransactionupdated.designer.cs">
+      <DependentUpon>202212230825283_testtransactionupdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AccountRepo.cs" />
@@ -117,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212181418486_Tokentableadded.resx">
       <DependentUpon>202212181418486_Tokentableadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212230825283_testtransactionupdated.resx">
+      <DependentUpon>202212230825283_testtransactionupdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
