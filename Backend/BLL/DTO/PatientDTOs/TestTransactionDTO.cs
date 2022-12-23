@@ -27,7 +27,7 @@ namespace BLL.DTO.PatientDTOs
         public DateTime Date { get; set; }
         [Required]
 
-        public Boolean Report_Delivered { get; set; }
+        public string Report_Delivered { get; set; }
 
     }
 }

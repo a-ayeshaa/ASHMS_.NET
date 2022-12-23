@@ -36,8 +36,9 @@ namespace BLL.Services.PatientServices
             return TestTransactions;
         }
 
-        public static TestTransactionDTO Add(TestTransactionDTO obj,int patient_id)
+        public static TestTransactionDTO Add(int patient_id)
         {
+            var obj = new TestTransactionDTO();
             var total = 0.00f;
             var testcarts = TestCartServices.Get();
             var testcart=(from t in testcarts
@@ -57,6 +58,7 @@ namespace BLL.Services.PatientServices
             obj.Status = "Pending";
             obj.Date = DateTime.Now;
             obj.Reference = "Self";
+            obj.Report_Delivered = "False";
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<TestTransaction, TestTransactionDTO>();
@@ -104,6 +106,11 @@ namespace BLL.Services.PatientServices
             return data;
         }
 
-        
+        //
+        public static void GetwithPatient(int patient_id)
+        {
+            var all = DataAccessFactory.TestTransactionDataAccess().Get();
+            
+        }
     }
 }
