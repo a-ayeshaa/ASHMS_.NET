@@ -101,8 +101,8 @@ namespace APIAppLayer.Controllers.Patient
             try
             {
                 var patient = PatientServices.GetPatientUser(Request.Headers.Authorization.ToString());
-                //var data = TestTransactionServices.GetwithPatient(patient.PatientDTO.Id);
-                return Request.CreateResponse(HttpStatusCode.OK, patient);
+                var data = TestTransactionServices.GetwithPatient(patient.PatientDTO.Id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch
             {

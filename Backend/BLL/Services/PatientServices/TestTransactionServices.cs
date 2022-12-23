@@ -59,6 +59,7 @@ namespace BLL.Services.PatientServices
             obj.Date = DateTime.Now;
             obj.Reference = "Self";
             obj.Report_Delivered = "False";
+            obj.Patient_Id = patient_id;
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<TestTransaction, TestTransactionDTO>();
@@ -107,10 +108,17 @@ namespace BLL.Services.PatientServices
         }
 
         //
-        public static void GetwithPatient(int patient_id)
+        public static List<TestTransactionDTO> GetwithPatient(int patient_id)
         {
             var all = DataAccessFactory.TestTransactionDataAccess().Get();
-            
+            var patientdata = all.FindAll(i=>i.Patient_Id.Equals(patient_id));
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<TestTransaction, TestTransactionDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<List<TestTransactionDTO>>(patientdata);
+
         }
     }
 }
