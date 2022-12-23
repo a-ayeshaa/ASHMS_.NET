@@ -90,5 +90,21 @@ namespace BLL.Services.DoctorServices
                 Update(item);
             }
         }
+        public static DoctorDTO getId(int id)
+        {
+            var data = DataAccessFactory.DoctorDataAccess().Get();
+            var doc = (from i in data
+                       where i.UserId == id
+                       select i).SingleOrDefault();
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Doctor, DoctorDTO>();
+            });
+            var mapper = new Mapper(config);
+            var newobj = mapper.Map<DoctorDTO>(doc);
+
+
+            return newobj;
+        }
     }
 }
