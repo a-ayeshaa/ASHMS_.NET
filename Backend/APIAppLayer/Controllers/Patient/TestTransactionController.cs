@@ -1,5 +1,7 @@
-﻿using BLL.DTO.PatientDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.PatientDTOs;
 using BLL.Services.PatientServices;
+using BLL.Services.UserServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ using System.Web.Http.Cors;
 namespace APIAppLayer.Controllers.Patient
 {
     [EnableCors("*", "*", "*")]
-
+    [Logged]
     public class TestTransactionController : ApiController
     {
         [Route("api/testtransactions")]
@@ -58,13 +60,15 @@ namespace APIAppLayer.Controllers.Patient
             }
         }
 
-        [Route("api/testtransactions/add/{patient_id}")]
-        [HttpPost]
-        public HttpResponseMessage Add(int patient_id,TestTransactionDTO data)
+        [Route("api/testtransactions/add")]
+        [HttpGet]
+        public HttpResponseMessage Add()
         {
             try
             {
-                var testtransactionData = TestTransactionServices.Add(data,patient_id);
+                var token = TokenServices.Get(Request.Headers.Authorization.ToString());
+                var patient_id = PatientUserServices.GetwithPatient(token.User_Id).PatientDTO.Id;
+                var testtransactionData = TestTransactionServices.Add(patient_id);
                 return Request.CreateResponse(HttpStatusCode.OK, testtransactionData);
 
             }
@@ -83,6 +87,22 @@ namespace APIAppLayer.Controllers.Patient
                 var obj = TestTransactionServices.Update(data);
                 return Request.CreateResponse(HttpStatusCode.OK, obj);
 
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+
+        [Route("api/testtransaction/patient")]
+        [HttpGet]
+        public HttpResponseMessage GetwithPatient()
+        {
+            try
+            {
+                var patient = PatientServices.GetPatientUser(Request.Headers.Authorization.ToString());
+                //var data = TestTransactionServices.GetwithPatient(patient.PatientDTO.Id);
+                return Request.CreateResponse(HttpStatusCode.OK, patient);
             }
             catch
             {

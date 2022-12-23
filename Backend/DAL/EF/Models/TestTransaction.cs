@@ -32,6 +32,9 @@ namespace DAL.EF.Models
 
 
         public virtual List<TestCart> Carts { get; set; }
+        [ForeignKey("Patient")]
+        public int Patient_Id { get;set; }
+        public virtual Patient Patient { get; set; }
         public TestTransaction()
         {
             Carts = new List<TestCart>();

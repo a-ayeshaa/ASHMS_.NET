@@ -48,11 +48,11 @@ namespace BLL.Services.PatientServices
 
         public static float GetTotal(int patient_id)
         {
-            var result = GetwithPatientandTest(patient_id);
+            var result = GetwithPatientTest(patient_id);
             float total = 0.00f;
             foreach(var price in result)
             {
-                total+=price.Price;
+                total+=price.TestDTO.Price;
             }    
             return total;
         }

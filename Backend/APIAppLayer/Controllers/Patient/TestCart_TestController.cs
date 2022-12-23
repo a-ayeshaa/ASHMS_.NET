@@ -41,7 +41,6 @@ namespace APIAppLayer.Controllers.Patient
             {
                 var token = TokenServices.Get(Request.Headers.Authorization.ToString());
                 var patient_id = PatientUserServices.GetwithPatient(token.User_Id).PatientDTO.Id;
-                //var data = Paitent_TestCartServices.GetwithPatientandTest(patient_id);
                 var data = Patient_TestCartServices.GetTotal(patient_id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }

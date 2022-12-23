@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BLL.DTO.PatientDTOs;
 using AutoMapper;
+using BLL.Services.UserServices;
 
 namespace BLL.Services.PatientServices
 {
@@ -74,6 +75,12 @@ namespace BLL.Services.PatientServices
             return data;
         }
 
-        
+        public static PatientUserDTO GetPatientUser(string token)
+        {
+            var tk = TokenServices.Get(token);
+            var patient = PatientUserServices.GetwithPatient(tk.User_Id);
+            return patient;
+
+        }
     }
 }
