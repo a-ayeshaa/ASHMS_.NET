@@ -112,6 +112,43 @@ namespace APIAppLayer.Controllers
             }
 
         }
+        [Route("api/doctor/appointments")]
+        [HttpGet]
+        public HttpResponseMessage GetAppointments()
+        {
+            try
+            {
+                var user = TokenServices.Get(Request.Headers.Authorization.ToString());
+                var doctor = DoctorServices.getId(user.User_Id);
+                var data = AppointmentDoctorServices.DoctorAppoinments(doctor.Id);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
+        //[Route("api/doctor/appointments/patients")]
+        //[HttpGet]
+        //public HttpResponseMessage GetAppointmentsPatient()
+        //{
+        //    try
+        //    {
+        //        var user = TokenServices.Get(Request.Headers.Authorization.ToString());
+        //        var doctor = DoctorServices.getId(user.User_Id);
+        //        var data = AppointmentDoctorServices.DoctorAppoinments(doctor.Id);
+        //        //var patient = AppointmentDoctorServices.PatientAppointments(data);
+
+        //        return Request.CreateResponse(HttpStatusCode.OK, data);
+        //    }
+        //    catch
+        //    {
+        //        return Request.CreateResponse(HttpStatusCode.NotFound);
+        //    }
+
+        //}
 
     }
 }

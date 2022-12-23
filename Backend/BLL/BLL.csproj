@@ -50,7 +50,9 @@
     <Compile Include="DTO\AdminDTOs\MedicineDTO.cs" />
     <Compile Include="DTO\AdminDTOs\TestDTO.cs" />
     <Compile Include="DTO\DoctorDTOS\AppointmentDTO.cs" />
+    <Compile Include="DTO\DoctorDTOS\DoctorAppointmentDTO.cs" />
     <Compile Include="DTO\DoctorDTOS\PrescriptionDTO.cs" />
+    <Compile Include="DTO\PatientDTOs\AppointmentPatientDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientUserDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCartDTO.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="Services\AdminServices\MedicineServices.cs" />
     <Compile Include="Services\AdminServices\TestServices.cs" />
     <Compile Include="Services\DoctorServices\AppointmentServices.cs" />
+    <Compile Include="Services\DoctorServices\AppointmentDoctorServices.cs" />
     <Compile Include="Services\DoctorServices\PrescriptionServices.cs" />
     <Compile Include="Services\PatientServices\Patient_TestCartServices.cs" />
     <Compile Include="Services\PatientServices\PatientServices.cs" />
