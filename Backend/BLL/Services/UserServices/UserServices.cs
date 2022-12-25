@@ -12,12 +12,6 @@ namespace BLL.Services.UserServices
 {
     public class UserServices
     {
-        private UserDTO userDTO;
-
-        public UserServices(UserDTO userDTO)
-        {
-            this.userDTO = userDTO;
-        }
 
         public static UserDTO Get(int id)
         {

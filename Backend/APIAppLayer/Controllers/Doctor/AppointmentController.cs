@@ -2,6 +2,7 @@
 using BLL.DTO.DoctorDTOS;
 using BLL.DTO.UserDTOs;
 using BLL.Services.DoctorServices;
+using BLL.Services.PatientServices;
 using BLL.Services.UserServices;
 using System;
 using System.Collections.Generic;
@@ -112,6 +113,27 @@ namespace APIAppLayer.Controllers.Doctor
             }
 
         }
-        
+
+
+        //AYESHA/////////////////////////////////////////////////////////////////////////
+
+        [Route("api/doctor/appointment/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetAppointments(int id)
+        {
+            try
+            {
+                var data = PatientAppointmentServices.GetAppointments(id);
+
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
+
     }
 }

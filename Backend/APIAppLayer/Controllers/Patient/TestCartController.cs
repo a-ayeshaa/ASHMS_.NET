@@ -94,5 +94,21 @@ namespace APIAppLayer.Controllers.Patient
             }
         }
 
+        [Route("api/testcarts/transaction/{transaction_id}")]
+        [HttpGet]
+        public HttpResponseMessage GetItems(int transaction_id)
+        {
+            try
+            {
+                var obj = TestCartServices.GetItems(transaction_id);
+                return Request.CreateResponse(HttpStatusCode.OK, obj);
+
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+
     }
 }
