@@ -68,5 +68,20 @@ namespace BLL.Services.PatientServices
             return data;
         }
 
+        public static List<Test_TestCartDTO> GetItems(int transaction_id)
+        {
+            var items = Get();
+            var item = (from i in items
+                        where i.Test_Transaction_Id == transaction_id
+                        select i).ToList();
+            var tests = new List<Test_TestCartDTO>();
+            foreach(var i in item)
+            {
+                var s = TestCart_TestServices.GetwithTestDetail(i.Id);
+                tests.Add(s);
+            }
+            return tests;
+        }
+
     }
 }

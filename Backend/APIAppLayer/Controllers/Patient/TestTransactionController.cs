@@ -61,14 +61,14 @@ namespace APIAppLayer.Controllers.Patient
         }
 
         [Route("api/testtransactions/add")]
-        [HttpGet]
-        public HttpResponseMessage Add()
+        [HttpPost]
+        public HttpResponseMessage Add(TestTransactionDTO obj)
         {
             try
             {
                 var token = TokenServices.Get(Request.Headers.Authorization.ToString());
                 var patient_id = PatientUserServices.GetwithPatient(token.User_Id).PatientDTO.Id;
-                var testtransactionData = TestTransactionServices.Add(patient_id);
+                var testtransactionData = TestTransactionServices.Add(patient_id,obj);
                 return Request.CreateResponse(HttpStatusCode.OK, testtransactionData);
 
             }
@@ -102,6 +102,21 @@ namespace APIAppLayer.Controllers.Patient
             {
                 var patient = PatientServices.GetPatientUser(Request.Headers.Authorization.ToString());
                 var data = TestTransactionServices.GetwithPatient(patient.PatientDTO.Id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
+        [Route("api/testtransaction/patient/details/{t_id}")]
+        [HttpGet]
+        public HttpResponseMessage GetwithPatientDetails(int t_id)
+        {
+            try
+            {
+                //var patient = PatientServices.GetPatientUser(Request.Headers.Authorization.ToString());
+                var data = TestTransactionServices.GetwithPatientDetails(t_id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch

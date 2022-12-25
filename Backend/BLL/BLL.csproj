@@ -54,6 +54,7 @@
     <Compile Include="DTO\DoctorDTOS\PrescriptionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\AppointmentPatientDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientDTO.cs" />
+    <Compile Include="DTO\PatientDTOs\PatientTestTransactionDTO.cs" />
     <Compile Include="DTO\PatientDTOs\PatientUserDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCartDTO.cs" />
     <Compile Include="DTO\PatientDTOs\TestCart_TransactionDTO.cs" />
