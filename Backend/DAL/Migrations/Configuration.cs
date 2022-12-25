@@ -168,6 +168,23 @@
             //    });
             //}
             //context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
+
+
+
+            ////MEDICINE TABLE SEED
+            //List<Medicine> medicines = new List<Medicine>();
+            //Random r = new Random();
+            //Random random = new Random();
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    medicines.Add(new Medicine()
+            //    {
+            //        Id = i,
+            //        Chemical_Name = "Medicine" + i,
+            //        Description = "description"+ i,
+            //    });
+            //}
+            //context.Medicines.AddOrUpdate(medicines.ToArray());
         }
 
     }
