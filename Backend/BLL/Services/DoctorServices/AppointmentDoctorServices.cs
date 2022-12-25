@@ -65,5 +65,22 @@ namespace BLL.Services.DoctorServices
 
         //}
 
+        public static List<AppointmentDoctorDTO> AppointmentDoctors()
+        {
+            var doctor = DataAccessFactory.AppointmentDataAccess().Get();
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<Appointment, AppointmentDoctorDTO>();
+                c.CreateMap<Doctor, DoctorDTO>();
+
+            });
+            var mapper = new Mapper(cfg);
+            var obj = mapper.Map<List<AppointmentDoctorDTO>>(doctor);
+
+
+
+           
+            return obj;
+        }
+
     }
 }

@@ -72,5 +72,20 @@ namespace BLL.Services.DoctorServices
             var data = DataAccessFactory.AppointmentDataAccess().Update(newobj);
             return data;
         }
+
+        //Ayesha.//////////////////////////////////////////////////////////////////////
+        public static AppointmentDTO AddApp(AppointmentDTO obj)
+        {
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Appointment, AppointmentDTO>();
+                c.CreateMap<AppointmentDTO, Appointment>();
+            });
+            var mapper = new Mapper(config);
+            var newobj = mapper.Map<Appointment>(obj);
+            var data = DataAccessFactory.AppointmentDataAccess().Add(newobj);
+            return mapper.Map<AppointmentDTO>(data);
+
+        }
     }
 }

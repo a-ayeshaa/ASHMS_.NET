@@ -103,6 +103,18 @@
     <Compile Include="Migrations\202212242039438_medpress.designer.cs">
       <DependentUpon>202212242039438_medpress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202212251554065_setMedpresFK.cs" />
+    <Compile Include="Migrations\202212251554065_setMedpresFK.designer.cs">
+      <DependentUpon>202212251554065_setMedpresFK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212251600039_setMedpresFKk.cs" />
+    <Compile Include="Migrations\202212251600039_setMedpresFKk.designer.cs">
+      <DependentUpon>202212251600039_setMedpresFKk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212251742183_setMedpresFKk1.cs" />
+    <Compile Include="Migrations\202212251742183_setMedpresFKk1.designer.cs">
+      <DependentUpon>202212251742183_setMedpresFKk1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\AdminRepo\AccountRepo.cs" />
@@ -140,6 +152,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202212242039438_medpress.resx">
       <DependentUpon>202212242039438_medpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212251554065_setMedpresFK.resx">
+      <DependentUpon>202212251554065_setMedpresFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212251600039_setMedpresFKk.resx">
+      <DependentUpon>202212251600039_setMedpresFKk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212251742183_setMedpresFKk1.resx">
+      <DependentUpon>202212251742183_setMedpresFKk1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

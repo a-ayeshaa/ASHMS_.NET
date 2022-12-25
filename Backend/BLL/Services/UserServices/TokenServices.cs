@@ -55,7 +55,7 @@ namespace BLL.Services.UserServices
             return DataAccessFactory.TokenDataAccess().Delete(id);
         }
 
-        public static TokenDTO Update(TokenDTO obj)
+        public static bool Update(TokenDTO obj)
         {
             var config = new MapperConfiguration(c =>
             {
@@ -65,7 +65,7 @@ namespace BLL.Services.UserServices
             var mapper = new Mapper(config);
             var newobj = mapper.Map<Token>(obj);
             var data = DataAccessFactory.TokenDataAccess().Update(newobj);
-            return mapper.Map<TokenDTO>(data);
+            return data;
         }
     }
 }

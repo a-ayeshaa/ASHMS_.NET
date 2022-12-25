@@ -14,7 +14,7 @@ namespace BLL.DTO.DoctorDTOS
         public int Id { get; set; }
         public int Doctor_Id { get; set; }
         public int Patient_Id { get; set; }
-        public DateTime? startedAt { get; set; }
+        public DateTime startedAt { get; set; }
         public DateTime? endedAt { get; set; }
         public string status { get; set; }
         public int revisit_count { get; set; }
