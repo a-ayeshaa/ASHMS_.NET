@@ -1,4 +1,5 @@
-﻿using BLL.DTO.AdminDTOs;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.AdminDTOs;
 using BLL.Services.AdminServices;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Web.Http.Cors;
 namespace APIAppLayer.Controllers.Admin
 {
     [EnableCors("*","*","*")]
+    [Logged]
     public class MedicineController : ApiController
     {
         [Route("api/medicines")]

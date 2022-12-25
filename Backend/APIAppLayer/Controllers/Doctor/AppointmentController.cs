@@ -88,12 +88,21 @@ namespace APIAppLayer.Controllers.Doctor
         }
         [Route("api/appointments/update/{id}")]
         [HttpPost]
-        public HttpResponseMessage Update(int id, AppointmentDTO doctor)
+        public HttpResponseMessage Update(int id, AppointmentDTO appointment)
         {
             try
-            {
-                doctor.Id = id;
-                var data = AppointmentServices.Update(doctor);
+            {               
+
+                if(appointment.status == "Complete")
+                {
+                    appointment.endedAt = DateTime.Now;
+                }
+                else if(appointment.status == "In Session")
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+
+                var data = AppointmentServices.Update(appointment);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }

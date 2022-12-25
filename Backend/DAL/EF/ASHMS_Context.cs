@@ -22,5 +22,6 @@ namespace DAL
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Token> Tokens { get; set; }
+        public DbSet<MedicinePrescription> MedicinePrescriptions { get; set; }
     }
 }

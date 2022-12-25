@@ -64,6 +64,10 @@ namespace DAL
         {
             return new TokenRepo();
         }
+        public static IRepo<MedicinePrescription, int, MedicinePrescription> MedicinePrescriptionDataAccess()
+        {
+            return new MedicinePrescriptionRepo();
+        }
 
         public static IAuth AuthDataAccess()
         {
