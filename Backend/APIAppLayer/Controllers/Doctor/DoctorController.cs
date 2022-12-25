@@ -130,25 +130,29 @@ namespace APIAppLayer.Controllers
             }
 
         }
-        //[Route("api/doctor/appointments/patients")]
-        //[HttpGet]
-        //public HttpResponseMessage GetAppointmentsPatient()
-        //{
-        //    try
-        //    {
-        //        var user = TokenServices.Get(Request.Headers.Authorization.ToString());
-        //        var doctor = DoctorServices.getId(user.User_Id);
-        //        var data = AppointmentDoctorServices.DoctorAppoinments(doctor.Id);
-        //        //var patient = AppointmentDoctorServices.PatientAppointments(data);
+        [Route("api/doctor/appointments/{id}")]
+        [HttpGet]
+        public HttpResponseMessage GetAppointments(int id)
+        {
+            try
+            {
+                var user = TokenServices.Get(Request.Headers.Authorization.ToString());
+                var doctor = DoctorServices.getId(user.User_Id);
+                var data = AppointmentDoctorServices.DoctorAppoinments(doctor.Id);
 
-        //        return Request.CreateResponse(HttpStatusCode.OK, data);
-        //    }
-        //    catch
-        //    {
-        //        return Request.CreateResponse(HttpStatusCode.NotFound);
-        //    }
+                var appointment = (from i in data.Appointments
+                                   where i.Id == id
+                                   select i).SingleOrDefault();
 
-        //}
+                return Request.CreateResponse(HttpStatusCode.OK, appointment);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
+
 
     }
 }

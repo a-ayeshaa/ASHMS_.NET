@@ -71,5 +71,21 @@ namespace BLL.Services.DoctorServices
             var data = DataAccessFactory.PrescriptionDataAccess().Update(newobj);
             return data;
         }
+        public static PrescriptionDTO GetWithAppointment(int aid)
+        {
+            var data = DataAccessFactory.PrescriptionDataAccess().Get();
+
+            var prescription = (from i in data
+                                where i.Appointment_Id == aid
+                                select i).SingleOrDefault();
+
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Prescription, PrescriptionDTO>();
+            });
+            var mapper = new Mapper(config);
+            var Prescription = mapper.Map<PrescriptionDTO>(prescription);
+            return Prescription;
+        }
     }
 }

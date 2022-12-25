@@ -168,6 +168,44 @@
             //    });
             //}
             //context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
+
+            //medicine
+            List<Medicine> med = new List<Medicine>();
+
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Random docc = new Random();
+            //    med.Add(new Medicine()
+            //    {
+            //        Id = i,
+            //        Name = "Napa"+i,
+            //        Chemical_Name = "Paracetamol"+i
+
+            //    });
+            //}
+            //context.Medicines.AddOrUpdate(med.ToArray());
+
+            //medpres Seed Table
+            //List<MedicinePrescription> medprescriptions = new List<MedicinePrescription>();
+
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
+
+            //Random docc = new Random();
+            //for (int i = 1; i < 20; i++)
+            //{
+            //    medprescriptions.Add(new MedicinePrescription()
+            //    {
+            //        Id = i,
+            //        Medicine_Id = docc.Next(1, 101),
+            //        Prescription_Id = docc.Next(2,22),
+            //        Doze = "1 + 0 + 1"
+
+            //    });
+            //}
+            //context.MedicinePrescriptions.AddOrUpdate(medprescriptions.ToArray());
         }
 
     }

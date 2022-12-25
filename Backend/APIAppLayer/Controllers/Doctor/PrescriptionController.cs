@@ -1,4 +1,5 @@
-﻿using BLL.DTO.DoctorDTOS;
+﻿using APIAppLayer.AuthFilter;
+using BLL.DTO.DoctorDTOS;
 using BLL.Services.DoctorServices;
 using System;
 using System.Collections.Generic;
@@ -6,9 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Doctor
 {
+    [EnableCors("*", "*", "*")]
+    [Logged]
     public class PrescriptionController : ApiController
     {
         [Route("api/prescriptions")]
@@ -95,6 +99,21 @@ namespace APIAppLayer.Controllers.Doctor
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
+        }
+        [Route("api/prescriptions/appointment/{aid}")]
+        [HttpGet]
+        public HttpResponseMessage GetWithAppointment(int aid)
+        {
+            try
+            {
+                var data = PrescriptionServices.GetWithAppointment(aid);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
         }
     }
 }
