@@ -14,10 +14,7 @@ namespace BLL.DTO.UserDTOs
         public int Id { get; set; }
 
         [Required]
-        public int Patient_id { get; set; }
-
-        [Required]
-        public int Doctor_id { get; set; }
+        public int Appointment_Id { get; set; }
 
         [Required]
         public float Total_Amount { get; set; }

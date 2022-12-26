@@ -103,6 +103,7 @@
     <Compile Include="Controllers\Admin\AccountController.cs" />
     <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\Admin\MedicineController.cs" />
+    <Compile Include="Controllers\Admin\TransactionController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CompositeObject.cs" />
     <Compile Include="Controllers\Doctor\AppointmentController.cs" />

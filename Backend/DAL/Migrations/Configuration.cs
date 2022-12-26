@@ -155,8 +155,8 @@
             //prescription Seed Table
             //List<Prescription> prescriptions = new List<Prescription>();
             //Random docc = new Random();
-            ////Random pat = new Random();
-            ////string[] astatuses = { "Waiting", "In Session", "Complete" };
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
             //for (int i = 0; i < 20; i++)
             //{
             //    prescriptions.Add(new Prescription()
@@ -169,8 +169,8 @@
             //}
             //context.Prescriptions.AddOrUpdate(prescriptions.ToArray());
 
-            //medicine
-            List<Medicine> med = new List<Medicine>();
+            ////medicine
+            //List<Medicine> med = new List<Medicine>();
 
             //Random pat = new Random();
             //string[] astatuses = { "Waiting", "In Session", "Complete" };
@@ -206,6 +206,22 @@
             //    });
             //}
             //context.MedicinePrescriptions.AddOrUpdate(medprescriptions.ToArray());
+
+            ////Account Seed Table
+            //List<Account> accounts = new List<Account>();
+            //Random acc = new Random();
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    accounts.Add(new Account()
+            //    {
+            //        Id = acc.Next(1, 11),
+            //        Revenue = acc.Next(101, 111),
+            //        Date = DateTime.Now,
+            //        Transaction_type = "test"
+            //    });
+            //}
+            //context.Accounts.AddOrUpdate(accounts.ToArray());
+
         }
 
     }
