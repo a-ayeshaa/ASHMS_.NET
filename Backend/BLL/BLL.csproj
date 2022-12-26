@@ -74,6 +74,7 @@
     <Compile Include="Services\AdminServices\AccountServices.cs" />
     <Compile Include="Services\AdminServices\MedicineServices.cs" />
     <Compile Include="Services\AdminServices\TestServices.cs" />
+    <Compile Include="Services\AdminServices\TransactionService.cs" />
     <Compile Include="Services\DoctorServices\AppointmentPrescriptionServices.cs" />
     <Compile Include="Services\DoctorServices\AppointmentServices.cs" />
     <Compile Include="Services\DoctorServices\AppointmentDoctorServices.cs" />
