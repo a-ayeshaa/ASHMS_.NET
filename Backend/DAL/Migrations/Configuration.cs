@@ -154,15 +154,15 @@
 
             //prescription Seed Table
             //List<Prescription> prescriptions = new List<Prescription>();
-            //Random doccc = new Random();
-            ////Random pat = new Random();
-            ////string[] astatuses = { "Waiting", "In Session", "Complete" };
+            //Random docc = new Random();
+            //Random pat = new Random();
+            //string[] astatuses = { "Waiting", "In Session", "Complete" };
             //for (int i = 0; i < 20; i++)
             //{
             //    prescriptions.Add(new Prescription()
             //    {
             //        Id = i,
-            //        Appointment_Id = doccc.Next(21, 41),
+            //        Appointment_Id = docc.Next(21, 41),
             //        On_evaluation = Guid.NewGuid().ToString().Substring(0, 6)
 
             //    });
@@ -180,8 +180,8 @@
             //    med.Add(new Medicine()
             //    {
             //        Id = i,
-            //        Name = "Napa" + i,
-            //        Chemical_Name = "Paracetamol" + i
+            //        Name = "Napa"+i,
+            //        Chemical_Name = "Paracetamol"+i
 
             //    });
             //}
@@ -200,12 +200,28 @@
             //    {
             //        Id = i,
             //        Medicine_Id = docc.Next(1, 101),
-            //        Prescription_Id = docc.Next(2, 22),
+            //        Prescription_Id = docc.Next(2,22),
             //        Doze = "1 + 0 + 1"
 
             //    });
             //}
             //context.MedicinePrescriptions.AddOrUpdate(medprescriptions.ToArray());
+
+            ////Account Seed Table
+            //List<Account> accounts = new List<Account>();
+            //Random acc = new Random();
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    accounts.Add(new Account()
+            //    {
+            //        Id = acc.Next(1, 11),
+            //        Revenue = acc.Next(101, 111),
+            //        Date = DateTime.Now,
+            //        Transaction_type = "test"
+            //    });
+            //}
+            //context.Accounts.AddOrUpdate(accounts.ToArray());
+
         }
 
     }

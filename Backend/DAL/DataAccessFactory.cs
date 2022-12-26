@@ -31,6 +31,10 @@ namespace DAL
         {
             return new TestTransactionRepo();
         }
+        public static IRepo<Transaction, int, Transaction> TransactionDataAccess()
+        {
+            return new TransactionRepo();
+        }
         public static IRepo<TestCart, int, TestCart> TestCartDataAccess()
         {
             return new TestCartRepo();

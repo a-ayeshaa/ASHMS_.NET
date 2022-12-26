@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIAppLayer.Controllers.Admin
 {
     public class AccountController : ApiController
     {
+        [EnableCors("*", "*", "*")]
         [Route("api/accounts")]
         [HttpGet]
         public HttpResponseMessage Get()
