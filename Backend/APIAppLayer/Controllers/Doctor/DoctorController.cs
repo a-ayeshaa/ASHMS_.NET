@@ -153,6 +153,29 @@ namespace APIAppLayer.Controllers
 
         }
 
+        [Route("api/doctors/profile")]
+        [HttpGet]
+        public HttpResponseMessage GetDoctorWithToken()
+        {
+            try
+            {
+                var user = TokenServices.Get(Request.Headers.Authorization.ToString());
+                var doctor = DoctorServices.getId(user.User_Id);
+                //var data = AppointmentDoctorServices.DoctorAppoinments(doctor.Id);
+
+                //var appointment = (from i in data.Appointments
+                //                   where i.Id == id
+                //                   select i).SingleOrDefault();
+
+                return Request.CreateResponse(HttpStatusCode.OK, doctor);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+
+        }
+
 
     }
 }
