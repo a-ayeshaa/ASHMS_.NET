@@ -106,6 +106,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CompositeObject.cs" />
     <Compile Include="Controllers\Doctor\AppointmentController.cs" />
+    <Compile Include="Controllers\Doctor\AppointmentPrescriptionMedController.cs" />
     <Compile Include="Controllers\Doctor\DoctorController.cs" />
     <Compile Include="Controllers\Doctor\MedicinePrescriptionController.cs" />
     <Compile Include="Controllers\Doctor\PrescriptionController.cs" />

@@ -1,6 +1,5 @@
 ﻿using APIAppLayer.AuthFilter;
 using BLL.Services.DoctorServices;
-using BLL.Services.PatientServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,21 +8,19 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
-namespace APIAppLayer.Controllers.Patient
+namespace APIAppLayer.Controllers.Doctor
 {
-
     [EnableCors("*", "*", "*")]
     [Logged]
-    public class PatientPrescriptionController : ApiController
+    public class AppointmentPrescriptionMedController : ApiController
     {
-        [Route("api/patient/{id}/prescription")]
+        [Route("api/prescription/med/{id}")]
         [HttpGet]
         public HttpResponseMessage Get(int id)
         {
             try
             {
-                var data = AppointmentPrescriptionServices.GetAppointmentPrescription(id);
-                //var d = AppointmentPrescriptionServices.GetAppointmentPrescriptionMed(id);
+                var data = PrescriptionPresMedicineServices.medicinePrescriptions(id);
 
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -32,6 +29,5 @@ namespace APIAppLayer.Controllers.Patient
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
-
     }
 }

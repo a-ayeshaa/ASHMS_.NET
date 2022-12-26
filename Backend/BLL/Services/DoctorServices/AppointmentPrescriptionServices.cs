@@ -27,5 +27,22 @@ namespace BLL.Services.DoctorServices
             var obj= mapper.Map<AppointmentPrescriptionDTO>(app);
             return obj;
         }
+
+        public static AppointmentPrescriptionDTO GetAppointmentPrescriptionMed(int id)
+        {
+            var app = DataAccessFactory.AppointmentDataAccess().Get(id);
+            var data = app.Prescription[0];
+            var med = data.MedicinePrescriptions;
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Appointment, AppointmentPrescriptionDTO>();
+                c.CreateMap<Prescription, PrescriptionDTO>();
+                //c.CreateMap<MedicinePrescription, MedicinePrescriptionDTO>();
+            });
+            var mapper = new Mapper(config);
+            var obj = mapper.Map<AppointmentPrescriptionDTO>(app);
+            
+            return obj;
+        }
     }
 }
