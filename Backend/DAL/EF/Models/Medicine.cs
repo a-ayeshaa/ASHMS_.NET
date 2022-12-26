@@ -16,5 +16,12 @@ namespace DAL.EF.Models
         public string Chemical_Name { get; set; }
         [StringLength(50)]
         public string Description { get; set; }
+
+        public virtual List<MedicinePrescription> MedicinePrescriptions { get; set; }
+        public Medicine()
+        {
+            //appointment = new Appointment();
+            MedicinePrescriptions = new List<MedicinePrescription>();
+        }
     }
 }

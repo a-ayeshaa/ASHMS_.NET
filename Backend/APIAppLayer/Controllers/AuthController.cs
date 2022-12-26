@@ -33,6 +33,26 @@ namespace APIAppLayer.Controllers
             }
         }
 
+        [Route("api/logout")]
+        [HttpGet]
+        public HttpResponseMessage Logout()
+        {
+            try
+            {
+
+                var token = TokenServices.Get(Request.Headers.Authorization.ToString());
+                token.expiredAt = DateTime.Now;
+                var t = TokenServices.Update(token);
+                return Request.CreateResponse(HttpStatusCode.OK, t);
+            }
+            catch (Exception)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, "Username or Password Invalid");
+            }
+          
+           
+        }
+
 
     }
 }

@@ -20,9 +20,11 @@ namespace DAL.EF.Models
         public string Advancement { get; set; } //rest, posture change etc [reccomendations]
 
         public virtual Appointment appointment { get; set; }
-        //public Prescription()
-        //{
-        //    appointment = new Appointment();
-        //}
+        public virtual List<MedicinePrescription> MedicinePrescriptions { get; set; }
+        public Prescription()
+        {
+            //appointment = new Appointment();
+            MedicinePrescriptions = new List<MedicinePrescription>();
+        }
     }
 }
